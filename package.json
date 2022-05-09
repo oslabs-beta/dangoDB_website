@@ -4,12 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve",
-    "build": "webpack"
+    "start": "NODE_ENV=production node server/server.js",
+    "build": "NODE_ENV=production webpack",
+    "dev": "NODE_ENV=development nodemon server/server.js & NODE_ENV=development webpack serve --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oslabs-beta/dangoDB_website.git"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "build",
+      "client"
+    ]
   },
   "keywords": [],
   "author": "dangoDB",
@@ -19,6 +27,8 @@
   },
   "homepage": "https://github.com/oslabs-beta/dangoDB_website#readme",
   "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
@@ -27,6 +37,7 @@
     "@babel/preset-env": "^7.17.10",
     "@babel/preset-react": "^7.16.7",
     "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
     "html-webpack-plugin": "^5.5.0",
     "sass": "^1.51.0",
     "sass-loader": "^12.6.0",
