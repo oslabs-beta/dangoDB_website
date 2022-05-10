@@ -9,6 +9,7 @@ const SchemaProperty = ({ propertyName, type, defaultValue, required, unique, va
     const [defaultValue, setDefaultValue] = useState(''); 
     const [required, setRequired] = useState(false); 
     const [unique, setUnique] = useState(false); 
+    //this is the checkbox
     const [validationFunc, setValidationFunc] = useState(false); 
 
     const handleChange = (event) => {
