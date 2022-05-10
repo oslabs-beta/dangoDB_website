@@ -2,7 +2,7 @@
   "name": "dangodb_website",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "start": "NODE_ENV=production node server/server.js",
     "build": "NODE_ENV=production webpack",
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/oslabs-beta/dangoDB_website#readme",
   "dependencies": {
+    "css-loader": "^6.7.1",
     "express": "^4.18.1",
     "nodemon": "^2.0.16",
     "path": "^0.12.7",
