@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import App from './App.jsx';
 import { createRoot } from 'react-dom/client';
 import { render } from 'react-dom';
-import styles from './style/style.scss';
+//did you mean to import main.scss?
+import styles from './style/styles.scss';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
