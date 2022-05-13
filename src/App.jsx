@@ -6,8 +6,8 @@ import NavBar from './components/website/navbar/NavBar';
 const App = () => {
   return (
     <div className="container">
-      <h1>hello world </h1>
-      <NavBar />
+      {/* <h1>hello world </h1> */}
+      {/* <NavBar /> */}
       <MainContainer />
     </div>
   );

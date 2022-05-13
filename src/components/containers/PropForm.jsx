@@ -1,17 +1,42 @@
 import React, { useSelector, useEffect } from 'react';
 // import Buttons from '../../../emilia/Buttons';
 // import CreateProperty from '../../../emilia/CreateProperty';
-import TypeButton from'../../../emilia/TypeButton'; 
+import TypeButton from '../../../emilia/TypeButton';
+// import Buttons from '../../../emilia/Buttons';
+import SetRequiredButton from '../../../emilia/SetRequiredButton';
+import SetUniqueButton from '../../../emilia/SetUniqueButton';
 
 const PropForm = (props) => {
   return (
-    <div>
-      This will be the prop form
-      will hold state of everything that goes into schemaProperty
-      {/* <CreateProperty /> */}
-      {/* <TypeButton/> */}
+    <form>
+      <label>
+        {' '}
+        Property Name:
+        <input type="text" />
+      </label>
+      <TypeButton />
+      <label>
+        {' '}
+        Default Value:
+        <input type="text" />
+      </label>
       {/* <button onClick={handleClick}>CHOOSE TYPE</button> */}
-    </div>
+      <label>
+        {' '}
+        Required:
+        <SetRequiredButton />
+      </label>
+      <label>
+        {' '}
+        Unique:
+        <SetUniqueButton />
+      </label>
+      <label>
+        {' '}
+        Validation Function:
+        <input type="checkbox"></input>
+      </label>
+    </form>
   );
 };
 

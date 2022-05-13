@@ -1,15 +1,17 @@
 import React from 'react';
 // import BoolButton from './BoolButton';
 // import PropButton from './PropButton';
-import TypeButton from './TypeButton';
+// import TypeButton from './TypeButton';
+import SetRequiredButton from './SetRequiredButton';
+import SetUniqueButton from './SetUniqueButton';
 
 const Buttons = () => {
   return (
-    <>
-      {/* <BoolButton />
-      <PropButton /> */}
+    <div>
       <TypeButton />
-    </>
+      {/* <SetRequiredButton />
+      <SetUniqueButton /> */}
+    </div>
   );
 };
 

@@ -1,20 +1,20 @@
 //drop down menuimport React from "react";
 // import { Controller, useForm, useState } from "react-hook-form";
 import * as React from 'react';
+// import React, { useState } from 'react';
 
-const Type = () => {
-  
+const TypeButton = (props) => {
   const typeOptions = [
     { name: 'number', value: 'number' },
     { name: 'decimal128', value: 'decimal128' },
     { name: 'string', value: 'string' },
     { name: 'boolean', value: 'boolean' },
-    { name: 'object', value: 'object' },
+    { name: 'objectid', value: 'objectid' },
     { name: 'UUID', value: 'UUID' },
     { name: 'date', value: 'date' },
   ];
 
-  const [type, setType] = useState('number');
+  const [type, setType] = React.useState('number');
 
   const handleTypeChange = (event) => {
     setType(event.target.value);
@@ -25,28 +25,29 @@ const Type = () => {
       <Dropdown
         label="type"
         id="type"
-        options={typeOptions}
+        typeOptions={typeOptions}
         value={type}
-        onChange={handleTypeChange}
+        handleTypeChange={handleTypeChange}
       />
     </div>
   );
 };
 
-const Dropdown = ({ label, type, typeOptions, handleTypeChange }) => {
+const Dropdown = (props) => {
   return (
     <label>
-      {label}
-      <select value={type} onChange={handleTypeChange}>
-        {typeOptions.map((option) => (
-          <option value={option.type}>{option.label}</option>
+      Type: 
+      {/* {props.label} */}
+      <select value={props.value} onChange={props.handleTypeChange}>
+        {props.typeOptions.map((option) => (
+          <option value={option.value}>{option.name}</option>
         ))}
       </select>
     </label>
   );
 };
 
-export default Type;
+export default TypeButton;
 // function TypeButton({ onChange, value }) {
 //     const [radioState, setRadioState] = useState(value);
 
