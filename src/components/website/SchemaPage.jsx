@@ -2,7 +2,7 @@ import React from 'react';
 
 function Schema() {
     return (
-        <h1>this is the homepage</h1>
+        <h1>this is the schema page</h1>
     );
 }
 

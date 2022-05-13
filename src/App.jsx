@@ -6,23 +6,21 @@ import Demo from './components/website/DemoPage';
 import Docs from './components/website/DocsPage';
 import MainContainer from './components/containers/MainContainer';
 
-
-
-
-
 const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route exact element={<Home/>} path="/" />
-          <Route element={<Demo/>} path="/demo" />
-          <Route element={<Docs/>} path="/docs" />
+          <Route exact element={<Home />} path="/" />
+          <Route element={<Demo />} path="/demo" />
+          <Route element={<Docs />} path="/docs" />
           {/* <Route element={<Schema/>} path="/schema" /> */}
-          <Route element={<MainContainer/>} path="/schema" />
+          <Route element={<MainContainer />} path="/schema" />
         </Routes>
       </BrowserRouter>
+
+      {/* <MainContainer /> */}
     </div>
   );
 };
