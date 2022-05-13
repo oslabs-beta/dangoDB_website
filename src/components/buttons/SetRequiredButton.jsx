@@ -46,7 +46,7 @@ const SetRequiredButton = (props) => {
               setRequired(!currentRequired);
             }}
             type="radio"
-            name="answer"
+            name="reqAnswer"
             value={option.value}
             checked={option.value === required}
           />

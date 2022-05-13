@@ -1,18 +1,17 @@
 import React, { useSelector, useEffect } from 'react';
-// import Buttons from '../../../emilia/Buttons';
-// import CreateProperty from '../../../emilia/CreateProperty';
-import TypeButton from '../../../emilia/TypeButton';
-// import Buttons from '../../../emilia/Buttons';
-import SetRequiredButton from '../../../emilia/SetRequiredButton';
-import SetUniqueButton from '../../../emilia/SetUniqueButton';
+import TypeButton from './buttons/TypeButton';
+import SetRequiredButton from './buttons/SetRequiredButton';
+import SetUniqueButton from './buttons/SetUniqueButton';
+// import Buttons from './buttons/Buttons';
 
 const PropForm = (props) => {
   return (
-    <form>
+    <form >
       <label>
         {' '}
         Property Name:
-        <input type="text" />
+        <input 
+          type="text" />
       </label>
       <TypeButton />
       <label>
@@ -20,7 +19,6 @@ const PropForm = (props) => {
         Default Value:
         <input type="text" />
       </label>
-      {/* <button onClick={handleClick}>CHOOSE TYPE</button> */}
       <label>
         {' '}
         Required:
@@ -36,6 +34,7 @@ const PropForm = (props) => {
         Validation Function:
         <input type="checkbox"></input>
       </label>
+      <button>Save Property</button>
     </form>
   );
 };

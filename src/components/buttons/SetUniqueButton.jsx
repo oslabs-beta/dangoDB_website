@@ -43,7 +43,7 @@ const SetUniqueButton = (props) => {
                 setUnique(!currentUnique);
               }}
               type="radio"
-              name="answer"
+              name="uniqueAnswer"
               value={option.value}
               checked={option.value === unique}
             />

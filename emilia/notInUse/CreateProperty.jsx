@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // import Buttons from './Buttons';
-import TypeButton from './TypeButton';
+import TypeButton from '../../src/components/buttons/TypeButton';
 
 // const schemaObject = {};
 

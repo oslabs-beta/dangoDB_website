@@ -9,8 +9,8 @@ const Buttons = () => {
   return (
     <div>
       <TypeButton />
-      {/* <SetRequiredButton />
-      <SetUniqueButton /> */}
+      <SetRequiredButton />
+      <SetUniqueButton />
     </div>
   );
 };
