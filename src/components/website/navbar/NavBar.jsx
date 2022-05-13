@@ -7,18 +7,10 @@ const NavBar = () => {
     <nav className="navbar">
         <h3 className="logo">Logo</h3>
         <ul className="nav-links">
-            <Link to="/" className="home">
-                <li>Home</li>
-            </Link>
-            <Link to="/docs" className="docs"> 
-                <li>Docs</li> 
-            </Link>
-            <Link to="/demo" className="demo"> 
-                <li>Demo</li> 
-            </Link>
-            <Link to="/generate" className="gen_schema"> 
-                <li>Generate Schema</li> 
-            </Link>
+            <li><Link to="/" className="home">Home</Link></li>
+            <li><Link to="/docs" className="docs">Docs</Link></li>
+            <li><Link to="/demo" className="demo">Demo</Link></li>
+            <li><Link to="/schema" className="gen_schema">Generate Schema</Link></li>
         </ul>
     </nav>
   );
