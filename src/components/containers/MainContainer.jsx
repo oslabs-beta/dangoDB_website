@@ -11,7 +11,7 @@ const MainContainer = (props) => {
   return (
     <main className="container">
       <h1>Add Property</h1>
-      <PropFormContainer/>
+      <PropForm/>
       <SideBar />
       {/* <CreateProperty /> */}
 
