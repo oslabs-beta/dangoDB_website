@@ -1,36 +1,6 @@
 import * as React from 'react';
-// import { Controller, useForm } from 'react-hook-form';
 
-// function RadioButtons({ onChange, value }) {
-//   const [radioState, setRadioState] = useState(value);
-
-//   return (
-//     <div>
-//       {[
-//         { name: 'true', value: true },
-//         { name: 'false', value: false },
-//       ].map((option) => (
-//         <label key={option.name}>
-//           {option.name}:
-//           <input
-//             onChange={(e) => {
-//               setRadioState(e.target.value);
-//               onChange(e.target.value === 'true');
-//             }}
-//             type="radio"
-//             name="answer"
-//             value={option.name}
-//             checked={option.name === radioState}
-//           />
-//         </label>
-//       ))}
-//     </div>
-//   );
-// }
-
-// export default RadioButtons;
-
-const SetRequiredButton = ({ required, setRequired }) => {
+const SetRequiredButton = ({ propInfo, setPropInfo }) => {
 
   return (
     <div>
@@ -42,13 +12,16 @@ const SetRequiredButton = ({ required, setRequired }) => {
           {option.name}:
           <input
             onChange={() => {
-              const currentRequired = required;
-              setRequired(!currentRequired);
+              const currentRequired = propInfo.required;
+              setPropInfo({
+                ...propInfo, 
+                required: !currentRequired
+              });
             }}
             type="radio"
             name="reqAnswer"
             value={option.value}
-            checked={option.value === required}
+            checked={option.value === propInfo.required}
           />
         </label>
       ))}

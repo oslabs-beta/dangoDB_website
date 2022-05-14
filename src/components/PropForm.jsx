@@ -2,56 +2,89 @@ import * as React from 'react';
 import TypeButton from './buttons/TypeButton';
 import SetRequiredButton from './buttons/SetRequiredButton';
 import SetUniqueButton from './buttons/SetUniqueButton';
-// import Buttons from './buttons/Buttons';
 
-const PropForm = (props) => {
+const PropForm = ({
+  addProp,
+  setCurrentProp,
+}) => {
+  const [propInfo, setPropInfo] = React.useState({
+    propName: '',
+    type: 'number',
+    defaultVal: '',
+    required: false,
+    unique: false,
+    validationFunc: false,
+  });
 
-  const [unique, setUnique] = React.useState(false);
-  const [required, setRequired] = React.useState(false);
-  const [type, setType] = React.useState('number');
+  const handleChangePropName = (event) => {
+    setPropInfo({
+      ...propInfo,
+      propName: event.target.value,
+    });
+  };
+
+  const handleChangeDefaultVal = (event) => {
+    setPropInfo({
+      ...propInfo,
+      defaultVal: event.target.value,
+    });
+  };
+
+  const handleChangeFunc = (event) => {
+    setPropInfo({
+      ...propInfo,
+      validationFunc: event.target.checked,
+    });
+  };
+
+  //update, send off, reset
+  const handleClick = (event) => {
+    event.preventDefault();
+    addProp(propInfo);
+    setCurrentProp({
+      index: undefined,
+    });
+    setPropInfo({
+      propName: '',
+      type: 'number',
+      defaultVal: '',
+      required: false,
+      unique: false,
+      validationFunc: false,
+    });
+  };
 
   return (
     <form>
-
       <label>
         Property Name:
-        <input type="text" />
+        <input type="text" value={propInfo.propName} onChange={handleChangePropName} />
       </label>
 
-      <TypeButton 
-        type={type}
-        setType={setType}
-        />
+      <TypeButton propInfo={propInfo} value={propInfo.type} setPropInfo={setPropInfo} />
 
       <label>
         Default Value:
-        <input type="text" />
+        <input type="text" value={propInfo.defaultVal} onChange={handleChangeDefaultVal} />
       </label>
 
       <label>
         Required:
-        <SetRequiredButton 
-          required={required}
-          setRequired={setRequired}
-          />
+        <SetRequiredButton propInfo={propInfo} setPropInfo={setPropInfo} />
       </label>
 
-      <label>Unique:
-        <SetUniqueButton
-          unique= {unique}
-          setUnique={setUnique}
-         />
+      <label>
+        Unique:
+        <SetUniqueButton propInfo={propInfo} setPropInfo={setPropInfo} />
       </label>
 
       <label>
         Validation Function:
-        <input type="checkbox"></input>
+        <input type="checkbox" checked={propInfo.validationFunc} onChange={handleChangeFunc} />
       </label>
 
-      <button>Save Property</button>
-
+      <button onClick={handleClick}>Save Property</button>
     </form>
-
   );
 };
 
