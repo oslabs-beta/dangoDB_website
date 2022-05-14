@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 const input = {
   prop: 'something',
@@ -20,7 +20,7 @@ const PropDrop = (props) => {
         <span>Property</span>
       </button>
       <div ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>
-        
+        <p>this is working</p>
       </div>
     </div>
   )
