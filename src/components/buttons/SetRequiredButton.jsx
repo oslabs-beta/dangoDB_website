@@ -30,8 +30,8 @@ import * as React from 'react';
 
 // export default RadioButtons;
 
-const SetRequiredButton = (props) => {
-  const [required, setRequired] = React.useState(false);
+const SetRequiredButton = ({ required, setRequired }) => {
+
   return (
     <div>
       {[

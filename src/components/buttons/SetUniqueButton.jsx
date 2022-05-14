@@ -27,8 +27,7 @@ import * as React from 'react';
 //   }
 
 
-const SetUniqueButton = (props) => {
-    const [unique, setUnique] = React.useState(false);
+const SetUniqueButton = ({ unique, setUnique }) => {
     return (
       <div>
         {[

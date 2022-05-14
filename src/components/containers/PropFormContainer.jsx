@@ -6,9 +6,14 @@ import SetUniqueButton from './buttons/SetUniqueButton';
 
 const PropFormContainer = (props) => {
     return(
-        <div>
-            <PropForm/>
-        </div>
+        
+            <PropForm
+                // key={el.name}
+                // name={el.name}
+                // value={el.value}
+                
+            />
+       
     )
 }
 

@@ -12,7 +12,7 @@ const MainContainer = (props) => {
     <main className="container">
       <h1>Add Property</h1>
       <PropForm/>
-      <SideBar />
+      {/* <SideBar /> */}
       {/* <CreateProperty /> */}
 
   

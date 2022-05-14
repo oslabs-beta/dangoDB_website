@@ -3,7 +3,7 @@
 import * as React from 'react';
 // import React, { useState } from 'react';
 
-const TypeButton = (props) => {
+const TypeButton = ({ type, setType }) => {
   const typeOptions = [
     { name: 'number', value: 'number' },
     { name: 'decimal128', value: 'decimal128' },
@@ -13,8 +13,6 @@ const TypeButton = (props) => {
     { name: 'UUID', value: 'UUID' },
     { name: 'date', value: 'date' },
   ];
-
-  const [type, setType] = React.useState('number');
 
   const handleTypeChange = (event) => {
     setType(event.target.value);
@@ -33,13 +31,13 @@ const TypeButton = (props) => {
   );
 };
 
-const Dropdown = (props) => {
+const Dropdown = ({ value, handleTypeChange, typeOptions }) => {
   return (
     <label>
-      Type: 
+      Type:
       {/* {props.label} */}
-      <select value={props.value} onChange={props.handleTypeChange}>
-        {props.typeOptions.map((option) => (
+      <select value={value} onChange={handleTypeChange}>
+        {typeOptions.map((option) => (
           <option value={option.value}>{option.name}</option>
         ))}
       </select>
