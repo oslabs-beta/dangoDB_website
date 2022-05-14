@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import PropForm from './PropForm';
+import PropForm from '../PropForm';
 import SideBar from './SideBar';
 // import CreateProperty from '../../../emilia/CreateProperty';
 // import TypeButton from '../../../emilia/TypeButton';
@@ -11,7 +11,7 @@ const MainContainer = (props) => {
   return (
     <main className="container">
       <h1>Add Property</h1>
-      <PropForm />
+      <PropForm/>
       <SideBar />
       {/* <CreateProperty /> */}
 
