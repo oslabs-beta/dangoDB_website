@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import PropForm from './PropForm';
+import PropForm from '../PropForm';
 import SideBar from './SideBar';
 // import CreateProperty from '../../../emilia/CreateProperty';
 // import TypeButton from '../../../emilia/TypeButton';
