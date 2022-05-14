@@ -4,10 +4,7 @@ import NavBar from './components/website/navbar/NavBar';
 import Home from './components/website/HomePage';
 import Demo from './components/website/DemoPage';
 import Docs from './components/website/DocsPage';
-import MainContainer from './components/containers/MainContainer';
-
-
-
+import Schema from './components/website/SchemaPage';
 
 
 const App = () => {
@@ -19,8 +16,7 @@ const App = () => {
           <Route exact element={<Home/>} path="/" />
           <Route element={<Demo/>} path="/demo" />
           <Route element={<Docs/>} path="/docs" />
-          {/* <Route element={<Schema/>} path="/schema" /> */}
-          <Route element={<MainContainer/>} path="/schema" />
+          <Route element={<Schema/>} path="/schema" />
         </Routes>
       </BrowserRouter>
     </div>
