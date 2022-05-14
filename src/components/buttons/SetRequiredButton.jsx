@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 // import { Controller, useForm } from 'react-hook-form';
 
 // function RadioButtons({ onChange, value }) {
@@ -30,8 +30,9 @@ import React, { useState } from 'react';
 
 // export default RadioButtons;
 
-export function SetUniqueButton(props) {
-  return ( 
+const SetRequiredButton = (props) => {
+  const [required, setRequired] = React.useState(false);
+  return (
     <div>
       {[
         { name: 'true', value: true },
@@ -40,44 +41,18 @@ export function SetUniqueButton(props) {
         <label key={option.name}>
           {option.name}:
           <input
-            onChange = {() => {
-              const currentUnique = props.unique; 
-              props.setUnique(!currentUnique);
+            onChange={() => {
+              const currentRequired = required;
+              setRequired(!currentRequired);
             }}
-            type ="radio"
-            name ="answer"
-            value ={option.name}
-            checked ={option.name === props.unique}
+            type="radio"
+            name="reqAnswer"
+            value={option.value}
+            checked={option.value === required}
           />
         </label>
       ))}
     </div>
-  )  
-}
-
-export function SetRequiredButton(props) {
-  return ( 
-    <div>
-      {[
-        { name: 'true', value: true },
-        { name: 'false', value: false },
-      ].map((option) => (
-        <label key={option.name}>
-          {option.name}:
-          <input
-            onChange = {() => {
-              const currentRequired = props.required; 
-              props.setRequired(!currentRequired);
-            }}
-            type ="radio"
-            name ="answer"
-            value ={option.name}
-            checked ={option.name === props.required}
-          />
-        </label>
-      ))}
-    </div>
-  )
-}
-
-
+  );
+};
+export default SetRequiredButton;

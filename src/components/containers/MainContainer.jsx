@@ -6,11 +6,11 @@ import SideBar from './SideBar';
 
 const MainContainer = (props) => {
   //handle click function for adding a prop? should invoke the generate form
-  const addProp = () => {};
+  // const addProp = () => {};
 
   return (
     <main className="container">
-      <h1>Generate Schema</h1>
+      <h1>Add Property</h1>
       <PropForm />
       <SideBar />
       {/* <CreateProperty /> */}
