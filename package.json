@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/oslabs-beta/dangoDB_website#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
     "css-loader": "^6.7.1",
     "express": "^4.18.1",
     "kill-port": "^2.0.0",

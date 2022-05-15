@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import * as React from 'react';
 
 const options = [
   { prop: 'something' },
@@ -9,20 +9,20 @@ const options = [
 //ToDo: Add edit and delete buttons
 
 const PropDrop = ({ savedProps }) => {
-  const [value, setValue] = useState('something');
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
+//   const [value, setValue] = useState('something');
+//   const handleChange = (event) => {
+//     setValue(event.target.value);
+//   };
 
   return (
-    <div>
+    <div>å
       <Dropdown
         //set label to current property name
         //label= savedProps[index].propName
-        label="label"
-        options={options}
-        value={value}
-        onChange={handleChange}
+        // label="label"
+        // options={options}
+        // value={value}
+        // onChange={handleChange}
       />
     </div>
   );
@@ -30,15 +30,30 @@ const PropDrop = ({ savedProps }) => {
 
 const Dropdown = ({ label, value, options, onChange }) => {
   return (
-    <label>
-      {label}
-      <select value={value} onChange={onChange}>
-        {options.map((option) => (
-          <option value={option.value}>{option.label}</option>
-        ))}
-      </select>
-    </label>
+    <div className="dropdown">
+      {/* {control is what you will click to open and close drop down} */}
+      <div className="control">
+        <div className="arrow"/>
+      </div>
+      <div className="options">
+        <div className="options">
+          {
+            properties.map(property => <div className="option"></div>)
+          }
+        </div>
+      </div>
+    </div>
+
   );
 };
+
+//     <label>
+//       {label}
+//       <select value={value} onChange={onChange}>
+//         {options.map((option) => (
+//           <option value={option.value}>{option.label}</option>
+//         ))}
+//       </select>
+//     </label>
 
 export default PropDrop;
