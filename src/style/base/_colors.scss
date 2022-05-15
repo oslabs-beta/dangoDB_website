@@ -1,25 +1,28 @@
 
-$background-color: #fff;
-// $primary-color: #;
-// $primary-color-lt: ;
-// $primary-color-drk: ;
+$bkrd-primary-color: #f6f6f6;
+$bkrd-secondary-color: darken($bkrd-primary-color, 5%);
+$bkrd-tertiary-color: darken($bkrd-secondary-color, 10%);
 
-$primary-gray: #333;
-$primary-gray-lt:#9D9D9D;
-$primary-gray-drk: #181818;
+$primary-black: #181818;
+$secondary-black: lighten($primary-black, 20%);
+$tertiary-black: lighten($secondary-black, 20%);
 
-// $secondary-color: ;
-// $secondary-color-lt: ;
-// $secondary-color-drk:;
+$primary-color: #73aec9;
+$primary-color-lt: lighten($primary-color, 20%);
+$primary-color-drk: darken($primary-color, 20%);
 
-// $tertiary-color: #81B29A;
-// $tertiary-color-lt: #add5c2;
+$secondary-color: #81a18a;
+$secondary-color-lt: lighten($secondary-color, 20%);
+$secondary-color-drk: darken($secondary-color, 20%);
 
-// $font-stack: 'Roboto', 'Roboto Condensed', sans-serif; 
-// $font-RobotoC: 'Roboto Condensed', sans-serif;
+$tertiary-color: #d6c2c1;
+$tertiary-color-lt: lighten($tertiary-color, 20%);
+$tertiary-color-drk: darken($tertiary-color, 20%);
 
-// $btn-primary: #3D405B;
-// $btn-secondary: #6E7296;
+$primary-accent-color: #fc2992;
+
+$btn-primary: #3D405B;
+$btn-secondary: #6E7296;
 
 
 
