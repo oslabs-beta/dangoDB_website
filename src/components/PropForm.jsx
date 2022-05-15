@@ -3,10 +3,8 @@ import TypeButton from './buttons/TypeButton';
 import SetRequiredButton from './buttons/SetRequiredButton';
 import SetUniqueButton from './buttons/SetUniqueButton';
 
-const PropForm = ({
-  addProp,
-  setCurrentProp,
-}) => {
+
+const PropForm = ({ addProp, setCurrentProp, setGenerateSchema, passToSchema }) => {
   const [propInfo, setPropInfo] = React.useState({
     propName: '',
     type: 'number',
@@ -37,7 +35,6 @@ const PropForm = ({
     });
   };
 
-  //update, send off, reset
   const handleClick = (event) => {
     event.preventDefault();
     addProp(propInfo);
@@ -54,18 +51,32 @@ const PropForm = ({
     });
   };
 
+ 
+
   return (
     <form>
-      <label>
+      <label className="label" >
         Property Name:
-        <input type="text" value={propInfo.propName} onChange={handleChangePropName} />
+        <input
+          type="text"
+          value={propInfo.propName}
+          onChange={handleChangePropName}
+        />
       </label>
 
-      <TypeButton propInfo={propInfo} value={propInfo.type} setPropInfo={setPropInfo} />
+      <TypeButton
+        propInfo={propInfo}
+        value={propInfo.type}
+        setPropInfo={setPropInfo}
+      />
 
       <label>
         Default Value:
-        <input type="text" value={propInfo.defaultVal} onChange={handleChangeDefaultVal} />
+        <input
+          type="text"
+          value={propInfo.defaultVal}
+          onChange={handleChangeDefaultVal}
+        />
       </label>
 
       <label>
@@ -80,10 +91,15 @@ const PropForm = ({
 
       <label>
         Validation Function:
-        <input type="checkbox" checked={propInfo.validationFunc} onChange={handleChangeFunc} />
+        <input
+          type="checkbox"
+          checked={propInfo.validationFunc}
+          onChange={handleChangeFunc}
+        />
       </label>
 
       <button onClick={handleClick}>Save Property</button>
+      
     </form>
   );
 };

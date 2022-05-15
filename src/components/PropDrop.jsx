@@ -1,14 +1,14 @@
 import React, { useState, useRef } from 'react';
 
 const options = [
-  {prop: 'something'},
-  {prop2: 'something else'},
-  {prop3: 'something more'}
+  { prop: 'something' },
+  { prop2: 'something else' },
+  { prop3: 'something more' },
 ];
 // Propery dropdown 'button'
+//ToDo: Add edit and delete buttons
 
-const PropDrop = (props) => {
-  // // state setter
+const PropDrop = ({ savedProps }) => {
   const [value, setValue] = useState('something');
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -17,7 +17,9 @@ const PropDrop = (props) => {
   return (
     <div>
       <Dropdown
-        label="Property"
+        //set label to current property name
+        //label= savedProps[index].propName
+        label="label"
         options={options}
         value={value}
         onChange={handleChange}
@@ -38,7 +40,5 @@ const Dropdown = ({ label, value, options, onChange }) => {
     </label>
   );
 };
-
-
 
 export default PropDrop;
