@@ -1,29 +1,44 @@
 import React, { useState } from 'react';
 
-const input = {
-  prop: 'something',
-  prop2: 'something else',
-  prop3: 'something more'
-};
+const options = [
+  {prop: 'something'},
+  {prop2: 'something else'},
+  {prop3: 'something more'}
+];
 // Propery dropdown 'button'
 
 const PropDrop = (props) => {
-  const dropdownRef = useRef(null);
-  // state setter
-  const [isActive, setIsActive] = useState(false);
-  // click to initiate dropdown
-  const onClick = () => setIsActive(!isActive);
+  // // state setter
+  const [value, setValue] = useState('something');
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
 
   return (
-    <div className="dropprop-container">
-      <button onClick={onClick} className="dropprop-trigger">
-        <span>Property</span>
-      </button>
-      <div ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>
-        
-      </div>
+    <div>
+      <Dropdown
+        label="Property"
+        options={options}
+        value={value}
+        onChange={handleChange}
+      />
     </div>
-  )
+  );
 };
+
+const Dropdown = ({ label, value, options, onChange }) => {
+  return (
+    <label>
+      {label}
+      <select value={value} onChange={onChange}>
+        {options.map((option) => (
+          <option value={option.value}>{option.label}</option>
+        ))}
+      </select>
+    </label>
+  );
+};
+
+
 
 export default PropDrop;
