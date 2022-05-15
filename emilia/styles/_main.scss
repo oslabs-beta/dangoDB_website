@@ -143,10 +143,18 @@ table {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-a:link { text-decoration: none; }
-a:visited {
-  color: #81A18A;
+a:link {
+  text-decoration: none;
 }
+
+a:visited {
+  color: #81a18a;
+  
+  &:hover {
+    color:#EDEDED;
+  }
+}
+
 
 html {
   font-size: 0.625em;
@@ -163,14 +171,12 @@ html {
   background-repeat: no-repeat !important;
   background-size: cover !important;
   background-attachment: fixed !important;
-  background-image: url(navheader.png) ;
+  background-image: url(navheader.png);
 }
-
-
 
 .navbar {
   background: #ededed;
-  
+
   margin-top: 30px;
   align-items: center;
   display: flex;
@@ -179,7 +185,6 @@ html {
   justify-content: space-between;
   font-size: 2rem;
   font-family: 'Questrial', sans-serif;
-  
 }
 
 .logo {
@@ -191,34 +196,30 @@ html {
 .nav-links {
   // justify-content: flex-end;
   color: rgb(63, 192, 186);
-  align-items: stretch;
+  align-items: center;
   gap: 50px;
   display: flex;
   flex-wrap: wrap;
   margin-right: 100px;
-  
-  button:hover {
-  cursor: pointer; 
-    background-color: #D6C2C1;
-    border: 6px solid  #D6C2C1;
-    color: #fc2992;
-   
-    
-}
 
   .button {
     font-family: 'Questrial', sans-serif;
-    background-color: #D5E4ED;
+    background-color: #d5e4ed;
     border-radius: 6px;
     display: flex;
     font-size: 2rem;
     padding: 1px;
-    border: 6px solid #D5E4ED;
+    border: 6px solid #d5e4ed;
     cursor: pointer;
-    
+
+    &:hover {
+      cursor: pointer;
+      background-color: #d6c2c1;
+      border: 6px solid #d6c2c1;
+      color: #fc2992;
+    }
   }
 }
-
 
 // {
 //   align-items: stretch;
