@@ -1,1 +1,10 @@
-@use '../../variables' as v;
+@use '../base/colors' as c;
+@use '../base/typography' as t;
+@use '../base/buttons' as b;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+

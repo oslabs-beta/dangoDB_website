@@ -1,0 +1,22 @@
+@use './colors' as c;
+@use './typography' as t;
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: c.$background-color;
+  color: c.$primary-gray-lt;
+}
