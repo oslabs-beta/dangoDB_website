@@ -2,10 +2,11 @@ import * as React from 'react';
 import PropForm from '../PropForm';
 import SideBar from './SideBar';
 
-// const MainContainer = (props) => {
 const MainContainer = ({ savedProps, setSavedProps }) => {
-  // const [savedProps, setSavedProps] = React.useState([]);
   const [currentProp, setCurrentProp] = React.useState({ index: undefined });
+  //generate schema button state
+  const [generateSchema, setGenerateSchema] = React.useState(false);
+
   const addProp = (property) => {
     if (currentProp.index === undefined)
       setSavedProps([...savedProps, property]);
@@ -30,6 +31,12 @@ const MainContainer = ({ savedProps, setSavedProps }) => {
         currentProp={currentProp}
         setCurrentProp={setCurrentProp}
       />
+      {/* <SchemaGenerator
+        generateSchema={generateSchema}
+        setGenerateSchema={setGenerateSchema}
+        savedProps={savedProps}
+      /> */}
+
       <button onClick={() => console.log(savedProps)}>hi</button>
     </main>
   );

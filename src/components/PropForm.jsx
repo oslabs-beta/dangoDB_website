@@ -3,7 +3,8 @@ import TypeButton from './buttons/TypeButton';
 import SetRequiredButton from './buttons/SetRequiredButton';
 import SetUniqueButton from './buttons/SetUniqueButton';
 
-const PropForm = ({ addProp, setCurrentProp }) => {
+
+const PropForm = ({ addProp, setCurrentProp, setGenerateSchema, passToSchema }) => {
   const [propInfo, setPropInfo] = React.useState({
     propName: '',
     type: 'number',
@@ -50,9 +51,11 @@ const PropForm = ({ addProp, setCurrentProp }) => {
     });
   };
 
+ 
+
   return (
     <form>
-      <label>
+      <label className="label" >
         Property Name:
         <input
           type="text"
@@ -96,6 +99,7 @@ const PropForm = ({ addProp, setCurrentProp }) => {
       </label>
 
       <button onClick={handleClick}>Save Property</button>
+      
     </form>
   );
 };
