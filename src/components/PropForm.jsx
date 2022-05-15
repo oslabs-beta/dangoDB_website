@@ -51,8 +51,6 @@ const PropForm = ({ addProp, setCurrentProp, setGenerateSchema, passToSchema }) 
     });
   };
 
- 
-
   return (
     <form>
       <label className="label" >

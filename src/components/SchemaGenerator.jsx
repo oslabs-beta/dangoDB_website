@@ -6,7 +6,7 @@ const SchemaGenerator = ({ generateSchema, setGenerateSchema, savedProps }) => {
   genSchemaOnClick = (event) => {
     event.preventDefault();
     setGenerateSchema(true);
-    passToSchema(savedProps);
+    generator(savedProps);
   };
 
   const generator = (schemaProps) => {
@@ -15,7 +15,7 @@ const SchemaGenerator = ({ generateSchema, setGenerateSchema, savedProps }) => {
   };
 
   //edit schema?  setGenerateSchema(false);
-  
+
   return (
     <div className="schemaGenerator">
       <UserSchema 
