@@ -2,10 +2,10 @@ import * as React from 'react';
 import PropForm from '../PropForm';
 import SideBar from './SideBar';
 
-const MainContainer = (props) => {
-  const [savedProps, setSavedProps] = React.useState([]);
+// const MainContainer = (props) => {
+const MainContainer = ({ savedProps, setSavedProps }) => {
+  // const [savedProps, setSavedProps] = React.useState([]);
   const [currentProp, setCurrentProp] = React.useState({ index: undefined });
-
   const addProp = (property) => {
     if (currentProp.index === undefined)
       setSavedProps([...savedProps, property]);
@@ -24,13 +24,13 @@ const MainContainer = (props) => {
         // currentProp={currentProp}
         setCurrentProp={setCurrentProp}
       />
-      <SideBar 
+      <SideBar
         savedProps={savedProps}
         setSavedProps={setSavedProps}
         currentProp={currentProp}
         setCurrentProp={setCurrentProp}
-        />
-      {/* <button onClick= {() => console.log(savedProps)}>hi</button> */}
+      />
+      <button onClick={() => console.log(savedProps)}>hi</button>
     </main>
   );
 };

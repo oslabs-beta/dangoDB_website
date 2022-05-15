@@ -10,8 +10,9 @@ module.exports = {
   },
   devServer: {
     static: {
-      publicPath: 'build', //'build'
-      directory: path.resolve(__dirname, 'build'),
+      publicPath: '/', //'build'
+      // directory: path.resolve(__dirname, 'build'),
+      directory: path.resolve(__dirname, 'src'),
     },
     proxy: {
       '/api': 'http://localhost:3000',
