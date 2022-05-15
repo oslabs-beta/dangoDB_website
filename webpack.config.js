@@ -10,12 +10,12 @@ module.exports = {
   },
   devServer: {
     static: {
-      publicPath: '/', //'build'
+      publicPath: '/',
       // directory: path.resolve(__dirname, 'build'),
       directory: path.resolve(__dirname, 'src'),
     },
     proxy: {
-      '/api': 'http://localhost:3000',
+      '/': 'http://localhost:3000',
     },
   },
   module: {
