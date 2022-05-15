@@ -1,8 +1,59 @@
 @use './mixins';
+@use './colors' as c;
 
 
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&display=swap');
 
-// h1 {
+
+$font-montserrat: 'Montserrat', sans-serif;
+$font-questrial: 'Questrial', sans-serif;
+
+html {
+  font-size: 0.625em;
+  font-family: $font-montserrat, $font-questrial, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  // color: ;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: 2.75rem;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 2.25rem;
+}
+
+h4 {
+  font-size: 1.65rem;
+}
+
+p {
+  font-size: 1.20rem;
+  margin-bottom: 1.25rem;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #81a18a;
   
-  
-// }
+  &:hover {
+    color:#EDEDED;
+  }
+}
+
+.small {
+  font-size: .95rem;
+}
