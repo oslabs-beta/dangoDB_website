@@ -145,7 +145,7 @@ table {
 }
 a:link { text-decoration: none; }
 a:visited {
-  color: rgb(255, 0, 149);
+  color: #81A18A;
 }
 
 html {
@@ -167,6 +167,7 @@ html {
 }
 
 
+
 .navbar {
   background: #ededed;
   
@@ -180,7 +181,6 @@ html {
   font-family: 'Questrial', sans-serif;
   
 }
-
 
 .logo {
   // justify-content: flex-start;
@@ -196,6 +196,27 @@ html {
   display: flex;
   flex-wrap: wrap;
   margin-right: 100px;
+  
+  button:hover {
+  cursor: pointer; 
+    background-color: #D6C2C1;
+    border: 6px solid  #D6C2C1;
+    color: #fc2992;
+   
+    
+}
+
+  .button {
+    font-family: 'Questrial', sans-serif;
+    background-color: #D5E4ED;
+    border-radius: 6px;
+    display: flex;
+    font-size: 2rem;
+    padding: 1px;
+    border: 6px solid #D5E4ED;
+    cursor: pointer;
+    
+  }
 }
 
 

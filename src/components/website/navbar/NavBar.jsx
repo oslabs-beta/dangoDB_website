@@ -24,9 +24,11 @@ const NavBar = () => {
               </Link>
             </li>
             <li>
+              <button className="button">
               <Link to="/schema" className="gen_schema">
-                Get Started
+                Generate Schema
               </Link>
+              </button>
             </li>
           </ul>
         </nav>

@@ -52,7 +52,7 @@ const PropForm = ({ addProp, setCurrentProp }) => {
 
   return (
     <form>
-      <label>
+      <label className="label" >
         Property Name:
         <input
           type="text"
