@@ -7,7 +7,8 @@
   align-items: center;
   justify-content: space-between;
   position: sticky;
-  font-family: t.$font-montserrat;
+  font-size: 20px;
+  font-family: t.$font-questrial;
   background-color: c.$bkrd-tertiary-color;
   color: c.$secondary-color;
   width: 100%;
@@ -16,9 +17,15 @@
   padding: 0 30px;
 
   a {
+    font-family: t.$font-questrial;
+    font-size: 20px;
     color: c.$secondary-color;
     padding: 10px 20px;
     margin: 0 5px;
+
+    &:hover {
+      color: c.$secondary-color-drk;
+    }
   } 
   
 
@@ -31,9 +38,6 @@
       color: c.$secondary-color-drk;
     }
   } 
-
- 
-
 
 }
 

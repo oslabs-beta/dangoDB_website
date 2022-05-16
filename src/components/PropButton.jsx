@@ -27,6 +27,7 @@ const PropButton = ({ propName, currentProp, setCurrentProp }) => {
           </div>
           <div className="prop-header__action">
             {/* this will be the arrow */}
+          
             <p>{open ? 'Close' : 'Open'}</p>
           </div>
       </div>

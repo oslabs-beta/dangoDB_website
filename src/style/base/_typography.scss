@@ -52,14 +52,6 @@ a, a:visited, a:active {
   text-decoration: none;
 }
 
-a:visited {
-  color: #81a18a;
-  
-  &:hover {
-    color:#EDEDED;
-  }
-}
-
 .small {
   font-size: .95rem;
 }
