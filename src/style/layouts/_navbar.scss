@@ -2,53 +2,80 @@
 @use '../base/typography' as t;
 @use '../base/buttons' as b;
 
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  font-family: t.$font-montserrat;
+  background-color: c.$bkrd-tertiary-color;
+  color: c.$secondary-color;
+  width: 100%;
+  height: 100px;
+  top: 0px;
+  padding: 0 30px;
+
+  a {
+    color: c.$secondary-color;
+    padding: 10px 20px;
+    margin: 0 5px;
+  } 
+  
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      color: c.$secondary-color-drk;
+    }
+  } 
+
+ 
 
 
-// .navbar {
+}
+
+
+// .navBarContainer {
+//   background: #ededed;
+//   align-items: stretch;
 //   display: flex;
+//   flex-direction: column;
 //   justify-content: space-between;
-//   align-items: center;
+//   height: 100px;
+//   background-repeat: no-repeat !important;
+//   background-size: cover !important;
+//   background-attachment: fixed !important;
+//   // background-image: url(../../assets/navheader.png);
 // }
 
-.navBarContainer {
-  background: #ededed;
-  align-items: stretch;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 400px;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-attachment: fixed !important;
-  // background-image: url(../../assets/navheader.png);
-}
+// .navbar {
+//   background: #ededed; 
 
-.navbar {
-  background: #ededed; 
+//   margin-top: 30px;
+//   align-items: center;
+//   display: flex;
+//   flex-shrink: 0;
+//   min-height: 3.25rem;
+//   justify-content: space-between;
+//   font-size: 2rem;
+//   font-family: 'Questrial', sans-serif;
+// }
 
-  margin-top: 30px;
-  align-items: center;
-  display: flex;
-  flex-shrink: 0;
-  min-height: 3.25rem;
-  justify-content: space-between;
-  font-size: 2rem;
-  font-family: 'Questrial', sans-serif;
-}
+// .logo {
+//   // justify-content: flex-start;
+//   align-items: stretch;
+//   margin-left: 100px;
+// }
 
-.logo {
-  // justify-content: flex-start;
-  align-items: stretch;
-  margin-left: 100px;
-}
-
-.nav-links {
-  // justify-content: flex-end;
-  color: rgb(63, 192, 186);
-  align-items: center;
-  gap: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: 100px;
-}
-
+// .nav-links {
+//   // justify-content: flex-end;
+//   color: rgb(63, 192, 186);
+//   align-items: center;
+//   gap: 50px;
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-right: 100px;
+// }

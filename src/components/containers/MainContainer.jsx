@@ -30,7 +30,7 @@ const MainContainer = ({ savedProps, setSavedProps }) => {
         savedProps={savedProps}
         setSavedProps={setSavedProps}
         currentProp={currentProp}
-        setCurrentProp={setCurrentProp}
+        // setCurrentProp={setCurrentProp}
       />
       <SchemaGenerator
         generateSchema={generateSchema}
