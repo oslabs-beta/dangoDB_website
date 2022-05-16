@@ -15,7 +15,7 @@ const PropDrop = ({ savedProps }) => {
 //   };
 
   return (
-    <div>å
+    <div>
       <Dropdown
         //set label to current property name
         //label= savedProps[index].propName
