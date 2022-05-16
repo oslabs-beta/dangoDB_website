@@ -8,9 +8,9 @@ const PropForm = ({ addProp, setCurrentProp }) => {
   const [propInfo, setPropInfo] = React.useState({
     propName: '',
     type: 'number',
-    defaultVal: '',
     required: false,
     unique: false,
+    defaultVal: '',
     validationFunc: false,
   });
 
@@ -44,9 +44,9 @@ const PropForm = ({ addProp, setCurrentProp }) => {
     setPropInfo({
       propName: '',
       type: 'number',
-      defaultVal: '',
       required: false,
       unique: false,
+      defaultVal: '',
       validationFunc: false,
     });
   };
@@ -68,14 +68,6 @@ const PropForm = ({ addProp, setCurrentProp }) => {
         setPropInfo={setPropInfo}
       />
 
-      <label>
-        Default Value:
-        <input
-          type="text"
-          value={propInfo.defaultVal}
-          onChange={handleChangeDefaultVal}
-        />
-      </label>
 
       <label>
         Required:
@@ -87,6 +79,15 @@ const PropForm = ({ addProp, setCurrentProp }) => {
         <SetUniqueButton propInfo={propInfo} setPropInfo={setPropInfo} />
       </label>
 
+      <label>
+        Default Value:
+        <input
+          type="text"
+          value={propInfo.defaultVal}
+          onChange={handleChangeDefaultVal}
+        />
+      </label>
+      
       <label>
         Validation Function:
         <input

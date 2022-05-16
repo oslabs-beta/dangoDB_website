@@ -18,9 +18,9 @@ module.exports = {
     },
     proxy: {
       '/': 'http://localhost:3000',
+      '/save-schema': 'http://localhost:3000',
     },
     hot: true,
-    // historyApiFallback: true,
   },
   module: {
     rules: [
