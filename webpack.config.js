@@ -20,10 +20,6 @@ module.exports = {
       '/': 'http://localhost:3000',
     },
     hot: true,
-<<<<<<< HEAD
-    // historyApiFallback: true,
-=======
->>>>>>> dev
   },
   module: {
     rules: [
