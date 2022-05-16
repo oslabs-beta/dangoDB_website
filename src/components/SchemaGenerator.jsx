@@ -1,29 +1,28 @@
 import * as React from 'react';
-
+import UserSchema from './UserSchema';
 
 const SchemaGenerator = ({ generateSchema, setGenerateSchema, savedProps }) => {
 
-  genSchemaOnClick = (event) => {
-    event.preventDefault();
+  const genSchemaOnClick = (event) => {
+    // event.preventDefault();
     setGenerateSchema(true);
-    passToSchema(savedProps);
-  };
-
-  const generator = (schemaProps) => {
-    
-     
   };
 
   //edit schema?  setGenerateSchema(false);
-  
+
   return (
     <div className="schemaGenerator">
-      <UserSchema 
       
-      />
-      <button className="genSchema" onclick={genSchemaOnClick}>
+      <UserSchema 
+        generateSchema={generateSchema} 
+        savedProps={savedProps} />
+
+      <button 
+        className="genSchema" 
+        onClick={genSchemaOnClick}>
         Generate Schema
       </button>
+
     </div>
   );
 };

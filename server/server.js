@@ -6,18 +6,18 @@ const cookieController = require('./controllers/cookieController');
 
 const app = express();
 const PORT = 3000;
-
 // Global JSON, HTTP body, and cookie parser
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-  // statically serve everything in the build folder on the route '/build'
+// statically serve everything in the build folder on the route '/build'
 app.use('/build', 
-  express.static(path.join(__dirname, '../build'))
+express.static(path.join(__dirname, '../build'))
 );
 // app.use(express.static(path.join(__dirname, '../build')));
 // serve index.html on the route '/'
+if (process.env.NODE_ENV === 'production') {
 app.get('/docs', 
   (req, res) => {
     return res.status(200).sendFile(path.join(__dirname, '../src/index.html'));
@@ -38,7 +38,7 @@ app.get('/',
     return res.status(200).sendFile(path.join(__dirname, '../src/index.html'));
   }
 );
-
+}
 // 404 route handler for unspecified endpoints
 app.use((req, res) => res.status(404).send('Page not found!'));
 

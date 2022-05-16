@@ -4,7 +4,7 @@ import SetRequiredButton from './buttons/SetRequiredButton';
 import SetUniqueButton from './buttons/SetUniqueButton';
 
 
-const PropForm = ({ addProp, setCurrentProp, setGenerateSchema, passToSchema }) => {
+const PropForm = ({ addProp, setCurrentProp }) => {
   const [propInfo, setPropInfo] = React.useState({
     propName: '',
     type: 'number',
@@ -50,8 +50,6 @@ const PropForm = ({ addProp, setCurrentProp, setGenerateSchema, passToSchema }) 
       validationFunc: false,
     });
   };
-
- 
 
   return (
     <form>
