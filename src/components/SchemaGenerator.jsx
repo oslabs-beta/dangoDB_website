@@ -1,7 +1,9 @@
 import * as React from 'react';
 import UserSchema from './UserSchema';
+import { CodeBlock, dracula } from "react-code-blocks";
+import { CopyBlock } from 'react-code-blocks';
 
-const SchemaGenerator = ({ generateSchema, setGenerateSchema, savedProps }) => {
+const SchemaGenerator = ({ code, language, showLineNumbers, generateSchema, setGenerateSchema, savedProps }) => {
 
   const genSchemaOnClick = (event) => {
     // event.preventDefault();
@@ -9,13 +11,15 @@ const SchemaGenerator = ({ generateSchema, setGenerateSchema, savedProps }) => {
   };
 
   //edit schema?  setGenerateSchema(false);
+  // console.log(savedProps)
 
   return (
     <div className="schemaGenerator">
       
       <UserSchema 
         generateSchema={generateSchema} 
-        savedProps={savedProps} />
+        savedProps={savedProps} 
+        />
 
       <button 
         className="genSchema" 
@@ -23,6 +27,14 @@ const SchemaGenerator = ({ generateSchema, setGenerateSchema, savedProps }) => {
         Generate Schema
       </button>
 
+      <CopyBlock
+   text={`${savedProps}`}
+   language={"javascript"}
+   showLineNumbers={true}
+   theme={dracula}/>
+
+      
+  
     </div>
   );
 };
