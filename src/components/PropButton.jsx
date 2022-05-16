@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const PropButton = ({ propName, currentProp = [], setCurrentProp }) => {
+const PropButton = ({ propName, currentProp, setCurrentProp }) => {
 
   //insert logic for editing the property (setCurrentProp, setSavedProp?)
   //re-render prop form 
@@ -30,11 +30,11 @@ const PropButton = ({ propName, currentProp = [], setCurrentProp }) => {
             <p>{open ? 'Close' : 'Open'}</p>
           </div>
       </div>
-      {open && (
+      {/* {open && (
         <PropPreview
         savedProps={savedProps}
         />
-      )}
+      )} */}
     </div>
   );
 };

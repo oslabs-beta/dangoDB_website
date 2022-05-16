@@ -7,7 +7,8 @@ const SideBar = ({ savedProps, currentProp, setCurrentProp }) => {
   const sidePropElement = savedProps.map((property) => {
     <PropButton
       propName={property.propName}
-      currentProp={property}
+      property={property}
+      currentProp={currentProp}
       //for editing purposes? or would we need setSavedProps?
       setCurrentProp={setCurrentProp}
     />;

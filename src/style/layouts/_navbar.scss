@@ -6,7 +6,37 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  font-family: t.$font-montserrat;
+  background-color: c.$bkrd-tertiary-color;
+  color: c.$secondary-color;
+  width: 100%;
+  height: 100px;
+  top: 0px;
+  padding: 0 30px;
+
+  a {
+    color: c.$secondary-color;
+    padding: 10px 20px;
+    margin: 0 5px;
+  } 
+  
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      color: c.$secondary-color-drk;
+    }
+  } 
+
+ 
+
+
 }
+
 
 // .navBarContainer {
 //   background: #ededed;
