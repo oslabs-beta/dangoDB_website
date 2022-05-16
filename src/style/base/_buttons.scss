@@ -3,19 +3,19 @@
 
 
 .button {
-  font-family: 'Questrial', sans-serif;
-  background-color: #d5e4ed;
+  font-family: t.$font-montserrat;
+  background-color: c.$primary-color-lt;
   border-radius: 6px;
-  display: flex;
-  font-size: 2rem;
-  padding: 1px;
-  border: 6px solid #d5e4ed;
+  // display: flex;
+  font-size: 16px;
+  padding: 3px 2px;
+  border: 1px solid c.$primary-color-lt;
   cursor: pointer;
 
   &:hover {
     cursor: pointer;
-    background-color: #d6c2c1;
-    border: 6px solid #d6c2c1;
-    color: #fc2992;
+    background-color: c.$secondary-color;
+    border: 1px solid c.$secondary-color-lt;
+    color: c.$secondary-color;
   }
 }

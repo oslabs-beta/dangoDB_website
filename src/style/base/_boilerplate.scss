@@ -144,7 +144,10 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
   background-color: c.$bkrd-primary-color;
   color: c.$primary-black;
+}
+
+img {
+  width: 100%;
 }

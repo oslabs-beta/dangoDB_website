@@ -1,7 +1,7 @@
 
 $bkrd-primary-color: #f6f6f6;
 $bkrd-secondary-color: darken($bkrd-primary-color, 5%);
-$bkrd-tertiary-color: darken($bkrd-secondary-color, 10%);
+$bkrd-tertiary-color:#ededed;
 
 $primary-black: #181818;
 $secondary-black: lighten($primary-black, 20%);
@@ -19,7 +19,7 @@ $tertiary-color: #d6c2c1;
 $tertiary-color-lt: lighten($tertiary-color, 20%);
 $tertiary-color-drk: darken($tertiary-color, 20%);
 
-$primary-accent-color: #fc2992;
+$primary-accent-color: #f87dba;
 
 $btn-primary: #3D405B;
 $btn-secondary: #6E7296;
