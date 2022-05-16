@@ -1,6 +1,7 @@
 import * as React from 'react';
 import PropForm from '../PropForm';
 import SideBar from './SideBar';
+import SchemaGenerator from '../SchemaGenerator';
 
 const MainContainer = ({ savedProps, setSavedProps }) => {
   const [currentProp, setCurrentProp] = React.useState({ index: undefined });
@@ -29,13 +30,13 @@ const MainContainer = ({ savedProps, setSavedProps }) => {
         savedProps={savedProps}
         setSavedProps={setSavedProps}
         currentProp={currentProp}
-        setCurrentProp={setCurrentProp}
+        // setCurrentProp={setCurrentProp}
       />
-      {/* <SchemaGenerator
+      <SchemaGenerator
         generateSchema={generateSchema}
         setGenerateSchema={setGenerateSchema}
         savedProps={savedProps}
-      /> */}
+      />
 
       <button onClick={() => console.log(savedProps)}>hi</button>
     </main>
