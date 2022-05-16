@@ -53,7 +53,7 @@ app.get('/',
     return res.status(200).sendFile(path.join(__dirname, '../src/index.html'));
   }
 );
-}
+
 // 404 route handler for unspecified endpoints
 app.use((req, res) => res.status(404).send('Page not found!'));
 

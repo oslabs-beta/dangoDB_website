@@ -35,6 +35,7 @@
     "css-loader": "^6.7.1",
     "express": "^4.18.1",
     "file-saver": "^2.0.5",
+    "html-webpack-plugin": "^5.5.0",
     "kill-port": "^2.0.0",
     "nodemon": "^2.0.16",
     "path": "^0.12.7",
