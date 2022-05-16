@@ -3,6 +3,7 @@ import PropDrop from '../PropDrop';
 
 const SideBar = ({ savedProps, currentProp, setCurrentProp }) => {
   //add stateful property to each prop drop
+  console.log('saved', savedProps);
   const sidePropElement = savedProps.map((element) => {
     <PropDrop
       savedProps={savedProps}
