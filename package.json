@@ -2,11 +2,11 @@
   "name": "dangodb_website",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=production node server/server.js",
     "build": "NODE_ENV=production webpack",
-    "dev": "NODE_ENV=development nodemon server/server.js & NODE_ENV=development webpack serve --open",
+    "dev": "NODE_ENV=development webpack serve --open & nodemon server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +27,9 @@
   },
   "homepage": "https://github.com/oslabs-beta/dangoDB_website#readme",
   "dependencies": {
+    "-": "^0.0.1",
+    "babel-loader": "^8.2.5",
+    "connect-history-api-fallback": "^1.6.0",
     "cookie-parser": "^1.4.6",
     "copy-to-clipboard": "^3.3.1",
     "css-loader": "^6.7.1",
@@ -46,9 +49,7 @@
     "@babel/core": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
     "@babel/preset-react": "^7.16.7",
-    "babel-loader": "^8.2.5",
     "cross-env": "^7.0.3",
-    "html-webpack-plugin": "^5.5.0",
     "sass": "^1.51.0",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",

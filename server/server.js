@@ -13,26 +13,41 @@ app.use(cookieParser());
 
 // statically serve everything in the build folder on the route '/build'
 app.use('/build', 
-express.static(path.join(__dirname, '../build'))
+  express.static(path.resolve(__dirname, '../build'))
 );
-// app.use(express.static(path.join(__dirname, '../build')));
-// serve index.html on the route '/'
-if (process.env.NODE_ENV === 'production') {
-app.get('/docs', 
+
+
+app.post('/save-schema', 
+  cookieController.setSessionCookie,
   (req, res) => {
-    return res.status(200).sendFile(path.join(__dirname, '../src/index.html'));
+    return res.status(201).send();
   }
 );
-app.get('/demo', 
+
+app.get('/save-schema', 
+  cookieController.getSessionCookie,
   (req, res) => {
-    return res.status(200).sendFile(path.join(__dirname, '../src/index.html'));
+    return res.status(200).json(res.locals.schema);
   }
 );
-app.get('/schema', 
-  (req, res) => {
-    return res.status(200).sendFile(path.join(__dirname, '../src/index.html'));
-  }
-);
+
+// React Router handles client-side navigation of the below endpoints.
+// Each endpoint responds with the template index.html file for scenario of page refersh on one of those endpoints.
+// app.get('/docs', 
+//   (req, res) => {
+//     return res.status(200).sendFile(path.join(__dirname, '../src/index.html'));
+//   }
+// );
+// app.get('/demo', 
+//   (req, res) => {
+//     return res.status(200).sendFile(path.join(__dirname, '../src/index.html'));
+//   }
+// );
+// app.get('/schema', 
+//   (req, res) => {
+//     return res.status(200).sendFile(path.join(__dirname, '../src/index.html'));
+//   }
+// );
 app.get('/', 
   (req, res) => {
     return res.status(200).sendFile(path.join(__dirname, '../src/index.html'));
