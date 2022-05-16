@@ -20,6 +20,7 @@ cookieController.setSessionCookie = (req, res, next) => {
   }
 }
 
+//test change
 cookieController.getSessionCookie = (req, res, next) => {
   try {
     const { schema } = req.cookies;
