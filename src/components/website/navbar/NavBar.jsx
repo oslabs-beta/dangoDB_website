@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import { VscGithub } from 'react-icons/fa';
 
 const NavBar = () => {
   return (
-      <div className="nav_img">
-        <nav className="navBarContainer">
+    <div className="nav_img">
+      <nav className="navBarContainer">
         <nav className="navbar">
           <h3 className="logo">Logo</h3>
           <ul className="nav-links">
-            <li> 
+            <li>
               <Link to="/" className="home">
                 Home
               </Link>
@@ -25,11 +26,19 @@ const NavBar = () => {
             </li>
             <li>
               <button className="button">
-              <Link to="/schema" className="gen_schema">
-                Generate Schema
-              </Link>
+                <Link to="/schema" className="gen_schema">
+                  Generate Schema
+                </Link>
               </button>
             </li>
+           
+              {/* <i className="gitHubIcon">
+                <Link to="https://github.com/oslabs-beta/dangoDB"
+                  className="github_icon">
+                  <VscGithub/>
+                </Link>
+              </i>
+             */}
           </ul>
         </nav>
       </nav>
