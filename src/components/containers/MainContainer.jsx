@@ -35,27 +35,30 @@ const MainContainer = ({ savedProps, setSavedProps }) => {
   }, [savedProps])
 
   return (
-    <main className="main_container">
-      <h1>Add Property</h1>
+    <main className="mainContainer">
+      {/* <h1>Add Property</h1> */}
       <PropForm
         addProp={addProp}
         // currentProp={currentProp}
         setCurrentProp={setCurrentProp}
       />
+        <SchemaGenerator
+          generateSchema={generateSchema}
+          setGenerateSchema={setGenerateSchema}
+          savedProps={savedProps}
+        />
       <SideBar
         savedProps={savedProps}
         setSavedProps={setSavedProps}
         currentProp={currentProp}
         // setCurrentProp={setCurrentProp}
       />
-      <SchemaGenerator
-        generateSchema={generateSchema}
-        setGenerateSchema={setGenerateSchema}
-        savedProps={savedProps}
-      />
 
-      <button onClick={() => console.log(savedProps)}>hi</button>
+      {/* <button onClick={() => console.log(savedProps)}>hi</button> */}
     </main>
   );
 };
 export default MainContainer;
+
+
+

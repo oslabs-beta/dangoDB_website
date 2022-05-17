@@ -23,4 +23,8 @@
     "header header header header"
     "sidebar main main main"
     "footer footer footer footer";
+.mainContainer {
+    box-sizing: content-box;
+    width: 100%
+}
 }

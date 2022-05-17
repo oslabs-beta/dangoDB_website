@@ -16,9 +16,8 @@ const SideBar = ({ savedProps, currentProp, setCurrentProp }) => {
   });
 
   return (
-    <div className="side_container">
-      <h2>This is housing the sidebar</h2>
-      <PropButton/>
+    <div className="side_bar">
+      {/* <h2>This is housing the sidebar</h2> */}
       {sidePropElement}
     </div>
   );
