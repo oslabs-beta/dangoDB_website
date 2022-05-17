@@ -5,6 +5,7 @@ import Home from './components/website/HomePage';
 import Demo from './components/website/DemoPage';
 import Docs from './components/website/DocsPage';
 import Schema from './components/website/SchemaPage';
+import Footer from './components/Footer'
 
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
         <NavBar />
         <Routes>
           {/* <Route exact element={<Home />} path="/" /> */}
+       
           <Route
             exact
             element={
@@ -40,7 +42,9 @@ const App = () => {
           <Route element={<Demo />} path="/demo" />
           <Route element={<Docs />} path="/docs" />
           <Route element={<Schema savedProps={savedProps} setSavedProps={setSavedProps} />} path="/schema" />
+          
         </Routes>
+        <Footer/>
       </HashRouter>
 
       {/* <MainContainer /> */}

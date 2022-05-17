@@ -1,8 +1,13 @@
 import React from 'react';
+import Hero from '../Hero';
 
-function Home(props) {
+
+
+function Home() {
     return (
-        <h1 className="test">this is the homepage</h1>
+       <div>
+           <Hero/>
+       </div>
     );
 }
 

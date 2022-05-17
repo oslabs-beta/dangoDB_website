@@ -1,5 +1,6 @@
 import * as React from 'react';
 import PropButton from '../PropButton';
+import Button from '@mui/material/Button';
 
 
 const SideBar = ({ savedProps, currentProp, setCurrentProp }) => {
