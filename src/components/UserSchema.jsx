@@ -31,7 +31,11 @@ const UserSchema = ({ generateSchema, savedProps }) => {
   }, [savedProps]);
 
   return (
+
     <div className="codeblock">
+      <CopyButton
+        parsedProps = { parsedProps }
+      />
       <CodeMirror
         value={parsedProps}
         height = '45vw'
@@ -40,9 +44,7 @@ const UserSchema = ({ generateSchema, savedProps }) => {
         extensions = {[javascript({ jsx: true })]}
         editable = {false}
       />
-      <CopyButton
-        parsedProps = { parsedProps }
-      />
+      
     </div>
   );
 };  

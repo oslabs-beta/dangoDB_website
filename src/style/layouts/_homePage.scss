@@ -2,3 +2,7 @@
 @use '../base/typography' as t;
 @use '../base/buttons' as b;
 
+.mainContainer {
+    box-sizing: content-box;
+    width: 100%
+}

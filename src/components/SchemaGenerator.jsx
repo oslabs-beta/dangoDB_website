@@ -9,20 +9,19 @@ const SchemaGenerator = ({ generateSchema, setGenerateSchema, savedProps }) => {
   };
 
   //edit schema?  setGenerateSchema(false);
-
   return (
     <div className="schemaGenerator">
-      
       <UserSchema 
         generateSchema={generateSchema} 
-        savedProps={savedProps} />
+        savedProps={savedProps} 
+      />
 
       <button 
-        className="genSchema" 
+        className="genSchemaButton" 
         onClick={genSchemaOnClick}>
         Generate Schema
       </button>
-
+      
     </div>
   );
 };
