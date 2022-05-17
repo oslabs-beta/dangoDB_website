@@ -2,3 +2,25 @@
 @use '../base/typography' as t;
 @use '../base/buttons' as b;
 
+.item-a {
+  grid-area: header;
+}
+.item-b {
+  grid-area: main;
+}
+.item-c {
+  grid-area: sidebar;
+}
+.item-d {
+  grid-area: footer;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header header"
+    "sidebar main main main"
+    "footer footer footer footer";
+}

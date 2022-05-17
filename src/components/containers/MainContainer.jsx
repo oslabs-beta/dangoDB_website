@@ -19,7 +19,7 @@ const MainContainer = ({ savedProps, setSavedProps }) => {
   };
 
   return (
-    <main className="container">
+    <main className="main_container">
       <h1>Add Property</h1>
       <PropForm
         addProp={addProp}

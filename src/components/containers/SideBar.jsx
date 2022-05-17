@@ -1,5 +1,6 @@
 import * as React from 'react';
 import PropButton from '../PropButton';
+import Button from '@mui/material/Button';
 
 
 const SideBar = ({ savedProps, currentProp, setCurrentProp }) => {
@@ -17,6 +18,7 @@ const SideBar = ({ savedProps, currentProp, setCurrentProp }) => {
   return (
     <div className="side_container">
       <h2>This is housing the sidebar</h2>
+      <PropButton/>
       {sidePropElement}
     </div>
   );

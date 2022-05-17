@@ -146,8 +146,13 @@ body {
   padding: 0;
   background-color: c.$bkrd-primary-color;
   color: c.$primary-black;
+  font-family: t.$font-montserrat;
 }
 
 img {
   width: 100%;
+}
+
+#root {
+  height: 100%;
 }

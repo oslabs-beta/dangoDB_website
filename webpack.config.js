@@ -5,14 +5,16 @@ module.exports = {
   mode: process.env.NODE_ENV,
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'build'),
+    // in production, the bundle will live on file System
     filename: 'bundle.js',
+    path: path.resolve(__dirname, 'build/'),
+    publicPath: '/',
   },
   devServer: {
     static: {
       publicPath: '/',
       // directory: path.resolve(__dirname, 'build'),
-      directory: path.resolve(__dirname, 'src'),
+      directory: path.resolve(__dirname, './src'),
     },
     proxy: {
       '/': 'http://localhost:3000',
@@ -44,9 +46,11 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'index.html'),
-    }),
+    new HtmlWebpackPlugin(
+      {
+        template: './src/index.html',
+      }
+    ),
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
