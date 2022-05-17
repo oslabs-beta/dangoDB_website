@@ -17,7 +17,7 @@ const SchemaGenerator = ({ generateSchema, setGenerateSchema, savedProps }) => {
       />
 
       <button 
-        className="genSchema" 
+        className="genSchemaButton" 
         onClick={genSchemaOnClick}>
         Generate Schema
       </button>

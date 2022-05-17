@@ -28,7 +28,11 @@
   "homepage": "https://github.com/oslabs-beta/dangoDB_website#readme",
   "dependencies": {
     "-": "^0.0.1",
+    "@codemirror/lang-javascript": "^0.20.0",
+    "@codemirror/theme-one-dark": "^0.20.0",
+    "@uiw/react-codemirror": "^4.7.0",
     "babel-loader": "^8.2.5",
+    "codemirror": "^5.65.3",
     "connect-history-api-fallback": "^1.6.0",
     "cookie-parser": "^1.4.6",
     "copy-to-clipboard": "^3.3.1",
@@ -36,17 +40,14 @@
     "express": "^4.18.1",
     "file-saver": "^2.0.5",
     "html-webpack-plugin": "^5.5.0",
-    "kill-port": "^2.0.0",
+    "js-beautify": "^1.14.3",
     "nodemon": "^2.0.16",
     "path": "^0.12.7",
-    "prop-types": "^15.8.1",
     "react": "^18.1.0",
-    "react-code-blocks": "^0.0.9-0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.3.1",
-    "react-router-dom": "^6.3.0",
-    "react-syntax-highlighter": "^15.5.0"
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",

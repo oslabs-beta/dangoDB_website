@@ -9,37 +9,56 @@ const MainContainer = ({ savedProps, setSavedProps }) => {
   const [generateSchema, setGenerateSchema] = React.useState(false);
 
   const addProp = (property) => {
-    if (currentProp.index === undefined)
+    if (currentProp.index === undefined) {
       setSavedProps([...savedProps, property]);
+    }
     else {
       //if user edits property, replace relevant index with updated property
       const saved = savedProps.slice();
       saved[currentProp.index] = property;
+      setSavedProps(saved);
     }
   };
 
+  //n save send a server request and set a session cookie based on the current saved properties to persist on page reload.
+  React.useEffect(() => {
+    const response = fetch('/save-schema', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ schema: savedProps })
+    })
+    .catch((err) => {
+      console.log(`${err}`);
+    });
+  }, [savedProps])
+
   return (
-    <main className="container">
-      <h1>Add Property</h1>
+    <main className="mainContainer">
+      {/* <h1>Add Property</h1> */}
       <PropForm
         addProp={addProp}
         // currentProp={currentProp}
         setCurrentProp={setCurrentProp}
       />
+        <SchemaGenerator
+          generateSchema={generateSchema}
+          setGenerateSchema={setGenerateSchema}
+          savedProps={savedProps}
+        />
       <SideBar
         savedProps={savedProps}
         setSavedProps={setSavedProps}
         currentProp={currentProp}
         // setCurrentProp={setCurrentProp}
       />
-      <SchemaGenerator
-        generateSchema={generateSchema}
-        setGenerateSchema={setGenerateSchema}
-        savedProps={savedProps}
-      />
 
-      <button onClick={() => console.log(savedProps)}>hi</button>
+      {/* <button onClick={() => console.log(savedProps)}>hi</button> */}
     </main>
   );
 };
 export default MainContainer;
+
+
+
