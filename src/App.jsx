@@ -12,48 +12,17 @@ const App = () => {
   
   const [savedProps, setSavedProps] = React.useState([]);
 
-  // Save current schema to a session cookie on page reload or close.
-  // window.addEventListener('beforeunload', () => {
-  //   const response = fetch('/save-schema', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify({ schemaState: savedProps })
-  //   })
-  //   .then()
-  //   .catch((err) => {
-  //     console.log(`${err}`);
-  //   });
-  // });
-  console.log(savedProps);
-
-  // React.useEffect(() => {
+  React.useEffect(() => {
      
-  //   fetch('/save-schema')
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //     console.log('data', data);
-  //     setSavedProps(data.schema)
-  //     console.log('props', savedProps)
-  //   })
-  //   .catch((err) => {
-  //     console.log(`${err}`);
-  //   });
-
-  //   return () => {
-  //     const response = fetch('/save-schema', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: JSON.stringify({ schemaState: savedProps })
-  //     })
-  //     .catch((err) => {
-  //       console.log(`${err}`);
-  //     });
-  //   }
-  // }, []);
+    fetch('/save-schema')
+      .then((res) => res.json())
+      .then((data) => {
+      setSavedProps(data)
+    })
+    .catch((err) => {
+      console.log(`${err}`);
+    });
+  }, []);
 
 
   return (

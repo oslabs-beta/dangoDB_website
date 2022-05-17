@@ -4,10 +4,9 @@ const cookieController = {};
 
 cookieController.setSessionCookie = (req, res, next) => {
   try {
-    const { schemaState } = req.body;
-    res.cookie('schema', schemaState, 'httpOnly')
-    console.log('here');
-    console.log('set', schemaState);
+    const { schema } = req.body;
+    if (req.cookies.schema) res.clearCookie('schema');
+    res.cookie('schema', schema)
     return next();
   } 
   catch (err) {
@@ -20,13 +19,10 @@ cookieController.setSessionCookie = (req, res, next) => {
   }
 }
 
-//test change
 cookieController.getSessionCookie = (req, res, next) => {
   try {
     const { schema } = req.cookies;
-    console.log('getcookie', schema);
     res.locals.schema = (schema !== undefined) ? schema : [];
-    console.log('reslocal', res.locals.schema);
     return next();
   }
   catch (err) {
