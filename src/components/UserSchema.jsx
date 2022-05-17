@@ -2,38 +2,46 @@ import * as React from 'react';
 import CodeMirror from '@uiw/react-codemirror';
 import { javascript } from '@codemirror/lang-javascript';
 import { oneDark } from '@codemirror/theme-one-dark';
+import CopyButton from './CopyButton';
 
 const UserSchema = ({ generateSchema, savedProps }) => {
   // const codeSnippet = generateSchema === true ? `${JSON.stringify(savedProps)}` : '';
   
   // console.log('here', savedProps[2])
     //iterate through savedProps and add each el to codeSnippet
-  const generateCodeSnippet = (userProps) => {
-    const schemaSnippet = {};
-    //for each property in savedProps, we will add a prop to the new object
-    for(const prop of userProps) {
-      // console.log('look here', prop)
-        schemaSnippet[prop.propName] = {type: `${prop.type}`, required: prop.required, unique: prop.unique, default: prop.defaultVal, validator: prop.validationFunc}//this is equal to just the string type OR an object 
-                                          //which contains the rest of the parameters
+  // const generateCodeSnippet = (userProps) => {
+  //   const schemaSnippet = {};
+  //   //for each property in savedProps, we will add a prop to the new object
+  //   for(const prop of userProps) {
+  //     // console.log('look here', prop)
+  //       schemaSnippet[prop.propName] = {type: `${prop.type}`, required: prop.required, unique: prop.unique, default: prop.defaultVal, validator: prop.validationFunc}//this is equal to just the string type OR an object 
+  //                                         //which contains the rest of the parameters
         
-    }
-    return JSON.stringify(schemaSnippet)
-  }
+  //   }
+  //   return JSON.stringify(schemaSnippet)
+  // }
+
+
+
+  const [parsedProps, setParsedProps] = React.useState('');
+  
+  //Temporary useEffect
+  React.useEffect(() => {
+    setParsedProps(parseState(savedProps));
+  }, [savedProps]);
 
   return (
     <div className="codeblock">
-      <pre>
-        <code className="schemaCode">
-          {generateCodeSnippet(savedProps)}
-        </code>
-      </pre>
       <CodeMirror
-        value={parseState(savedProps)}
+        value={parsedProps}
         height = '45vw'
         width = '50vw'
         theme = { oneDark }
         extensions = {[javascript({ jsx: true })]}
         editable = {false}
+      />
+      <CopyButton
+        parsedProps = { parsedProps }
       />
     </div>
   );
