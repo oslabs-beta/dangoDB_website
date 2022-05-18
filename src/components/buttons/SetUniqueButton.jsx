@@ -7,7 +7,7 @@ const SetUniqueButton = ({ propInfo, setPropInfo }) => {
           { name: 'true', value: true },
           { name: 'false', value: false },
         ].map((option) => (
-          <label key={option.name}>
+          <label className="uniquebtn" key={option.name}>
             {option.name}:
             <input
               onChange={() => {

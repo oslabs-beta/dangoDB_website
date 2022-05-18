@@ -3,112 +3,234 @@
 @use '../base/buttons' as b;
 
 
-
-
-.main_container {
+.mainContainer {
   background-color: c.$bkrd-primary-color;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   height: 100vh;
   overflow: hidden;
   margin: 0;
-}
 
+   // Side Bar
 
-  form {
+   .side_bar {
+    display: flex;
+    align-items: center;
+    height: 500px;
+    width: 200px;
+    border-radius: 6px;
+    background-color: c.$linen-color;
+  }
+
+  .schemaGen_container {
+  
+      .codeblock {
+        position: relative;
+
+        .mirror {
+        border-radius: 5px;
+        border: 4px solid c.$primary-grey;
+        }
+      }
+    
+
+  }
+
+  .cpybtn {
+     position: absolute;
+     top: 8px;
+     right: 8px;
+     display: inline-block;
+     color: c.$bkrd-primary-color;
+     z-index: 2;
+     transition: 0.2s ease;
+
+     &:hover {
+       color: c.$tertiary-color-drk;
+     }
+
+     &:active {
+       transform: scale(0.85);
+       color: c.$primary-grey;
+     }
+  }
+
+  // Property Form
+  .Form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    background-color: c.$secondary-color-lt;
+    justify-content: center;
+    background-color: c.$primary-color-xlt;
+    font-size: 20px;
+    width: 500px;
+    height: 500px;
+    margin: 0;
+    border: 2px solid c.$primary-color-lt;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     border-radius: 5px;
-    border: 1px solid #dedede;
-    margin: 10px auto;
-    min-width: 500px;
-    padding: 30px 50px;
-
-    // .select {
-    //   display: flex;
-    //   align-items: center;
-    //   flex-direction: row;
-    // }
-    .btn_form {
-      background-color: c.$bkrd-primary-color;
-      color: c.$secondary-color;
-      font-family: t.$font-montserrat;
-      font-size: 14px;
-      padding: 10px 7px;
-      margin: 20px 0px;
-      border-radius: 5px;
-      border: 1px solid c.$secondary-color-lt;
+    
+    .outerbrdr {
+      margin: 3px;
+      padding: 30px;
+      border: 3px solid c.$primary-color-lt;
+      border: 2px solid c.$primary-color;
+      
     }
 
-    input {
+    h1 {
       display: flex;
-      border: 1px solid #d9d9d9;
-      border-radius: 4px;
-      box-sizing: border-box;
-      padding: 10px;
-      width: 100%;
+      font-family:  t.$font-questrial;
+      color: c.$primary-grey-drk;
+      font-weight: 500;
+      font-size: 25px;
+      margin: 5px 5px 20px 5px;
+    }
+    label {
+      margin: 0 20px;
     }
   
-    label {
-      color: #3d3d3d;
-      // display: block;
-      font-family: t.$font-montserrat;
-      font-size: 14px;
-      font-weight: 500;
-      margin-bottom: 5px;
+    .form-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 3px 5px;
+      padding: 5px;
+
+   
+  
+
+      input[type="radio"] {
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        border: 2px solid c.$primary-grey;
+        border-radius: 50%;
+        background-clip: content-box;
+        padding: 3px;
+      }
+      
+      input[type="radio"]:checked {
+        background-color: c.$primary-grey;
+      }
+    
+
+      #prop-type {
+        display: flex;
+        font-size: 16px;
+        padding: 6px;
+        border-radius: 5px;
+        border: 1px solid c.$primary-color-lt;
+        width: 175px;
+      }
+
+      .dropdown {
+        display: flex;
+        align-items: center;
+        padding: 4px 4px 4px 0;
+       
+        .toggle {
+          margin: 0 0 0 20px;
+          font-family: t.$font-questrial;
+          font-size: 16px;
+          padding: 4px;
+          border-radius: 5px;
+          border: 1px solid c.$primary-color-lt;
+        }
+      }
+      .required {
+        display: flex;
+        justify-content: space-between;
+      }
+
+
+      .unique {
+        display: flex;
+        justify-content: space-between;
+
+        .uniquebtn {
+          display: flex;
+        }
+      }
+
+
+      #defaultval {
+        font-family: t.$font-questrial;
+        font-size: 16px;
+        padding: 6px;
+        border-radius: 5px;
+        border: 1px solid c.$primary-color-xlt;
+        width: 175px;
+   
+      }
+
+
+        .btn_form {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: t.$font-questrial;
+          font-size: 20px;
+          padding: 10px;
+          margin-top: 10px;
+        
+          border-radius: 10px;
+          background-color: c.$linen-color-lt;
+          border: 1px solid c.$primary-color-lt;
+          color: c.$primary-grey-drk;
+          font-weight: 400;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+          &:hover {
+            background-color: c.$primary-color;
+            color: c.$primary-color-xlt;
+      
+          }
+      
+          &:active {
+            background: c.$primary-grey
+          }
+      
+      }
+    
+
     }
   }
 
+ 
+  
+  //  Schema Generator
+  .schemabtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0 20px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: c.$linen-color-lt;
+    border: 1px solid c.$primary-color-xlt;
+    color: c.$primary-grey-drk;
+    font-family: t.$font-questrial;
+    font-size: 20px;
+    background-color: c.$linen-color-lt;
+    font-weight: 400;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    transition: 0.4s ease;
 
-@media (min-width: 1020px) {
-  .body {
-    margin: 40px;
-  }
-  .mainContainer {
-    display: grid;
-    // grid-template-columns: [col1-start] 70px [col2-start];
-    // grid-gap: 10px;
-    grid-column: 2 / span 3;
-    font-family: 'Questrial', sans-serif;
-    //   box-sizing: content-box;
-  }
-
-  .side_bar {
-    width: 600px;
-  }
-
-  .propForm {
-    width: 600px;
-    padding: 20px;
-    background-color: pink;
-  }
-
-  .schemaGenerator {
-    border-radius: 5px;
-  }
-
-  .genSchemaButton {
-    border-radius: 6px;
-    font-family: 'Questrial', sans-serif;
-    background-color: pink;
-    font-size: 0.9rem;
-    border: 6px solid pink;
-    cursor: pointer;
     &:hover {
-      cursor: pointer;
-      background-color: #ededed;
-      border: 6px solid #ededed;
-      color: #fc2992;
+      background-color: c.$primary-color;
+      color: c.$primary-color-xlt;
+
     }
+
+    &:active {
+      background: c.$primary-grey
+    }
+   
+ 
+
   }
 }
-
-
-
-
-

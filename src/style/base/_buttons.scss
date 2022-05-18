@@ -2,23 +2,19 @@
 @use './typography' as t;
 
 
-.button {
-  background-color: c.$primary-color-lt;
-  border-radius: 6px;
-  // display: flex;
-  font-size: 16px;
-  padding: 5px 0;
-  border: 1px solid c.$primary-color-lt;
-  cursor: pointer;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+// .button {
+//   background-color: c.$primary-color-lt;
+//   border-radius: 6px;
+//   // display: flex;
+//   font-size: 16px;
+//   padding: 5px 0;
+//   border: 1px solid c.$primary-color-lt;
+//   cursor: pointer;
 
-  &:hover {
-    cursor: pointer;
-    background-color: c.$secondary-color;
-    border: 1px solid c.$secondary-color-lt;
-    color: c.$secondary-color;
-  }
-}
+//   &:hover {
+//     cursor: pointer;
+//     background-color: c.$secondary-color;
+//     border: 1px solid c.$secondary-color-lt;
+//     color: c.$secondary-color;
+//   }
+// }
