@@ -8,10 +8,10 @@ function ContactCard({ photo, linkedin, github, name }) {
       <span className="contact-name" >{name}</span>
       <span className="contact-title">Software Engineer</span>
       <div>
-        <a href={ linkedin } className="contact-link-container">
+        <a href={ github } className="contact-link-container">
           <AiOutlineGithub className="contact-link" />
         </a>
-        <a href={ github } className="contact-link-container">
+        <a href={ linkedin } className="contact-link-container">
           <AiFillLinkedin className="contact-link" />
         </a>
       </div>
