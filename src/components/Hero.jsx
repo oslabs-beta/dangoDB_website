@@ -1,5 +1,5 @@
 import React from 'react';
-import dangoLogo from '../assets/dangoDB_logo_long_bigboi.png'
+import dangoLogo from '../assets/dangoDB_logo_long_midboi.png'
 
 
 
