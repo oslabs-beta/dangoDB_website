@@ -48,6 +48,17 @@
     }
   } 
 
+.nav-title {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+#dangoDB-logo {
+  width: 3rem;
+  height: 3rem;
+}
+
 }
 
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import dangoDeno from '../../../assets/dango_deno.png'
 
 // import { VscGithub } from 'react-icons/fa';
 
@@ -7,14 +8,20 @@ const NavBar = () => {
   return (
     <nav className="navBarContainer">
       <nav className="navbar">
-        <h3 className="logo">dangoDB</h3>
+        <div className="nav-title">
+          <a href="#/">
+            <img id="dangoDB-logo" src={dangoDeno} alt="dangoDB icon" />
+          </a>
+          <h3 className="logo">dangoDB</h3>
+        </div>
+        
         <ul className="nav-links">
           <li> 
             <Link to="/" className="home">
               Home
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/docs" className="docs">
               Docs
             </Link>
@@ -23,7 +30,7 @@ const NavBar = () => {
             <Link to="/demo" className="demo">
               Demo
             </Link>
-          </li>
+          </li> */}
           <li>
             <button className="button">
             <Link to="/schema" className="gen_schema">
