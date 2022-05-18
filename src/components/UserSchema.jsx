@@ -33,17 +33,23 @@ const UserSchema = ({ generateSchema, savedProps }) => {
   return (
 
     <div className="codeblock">
+      <div className="cpybtn">
       <CopyButton
+        className="copy_btn"
         parsedProps = { parsedProps }
       />
-      <CodeMirror
-        value={parsedProps}
-        height = '45vw'
-        width = '50vw'
-        theme = { oneDark }
-        extensions = {[javascript({ jsx: true })]}
-        editable = {false}
-      />
+       </div>
+       <div className="mirror">
+        <CodeMirror
+          className="codemirror"
+          value={parsedProps}
+          height = '500px'
+          width = '500px'
+          theme = { oneDark }
+          extensions = {[javascript({ jsx: true })]}
+          editable = {false}
+        />
+      </div>
       
     </div>
   );

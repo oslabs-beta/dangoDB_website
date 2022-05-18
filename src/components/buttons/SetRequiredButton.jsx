@@ -8,7 +8,7 @@ const SetRequiredButton = ({ propInfo, setPropInfo }) => {
         { name: 'true', value: true },
         { name: 'false', value: false },
       ].map((option) => (
-        <label key={option.name}>
+        <label className="reqBtn" key={option.name}>
           {option.name}:
           <input
             onChange={() => {
