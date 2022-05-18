@@ -1,25 +1,40 @@
 @use '../base/colors' as c;
 @use '../base/typography' as t;
 @use '../base/buttons' as b;
+@use '../base/mixins' as m;
+
+
+.navBarContainer {
+  background-color: c.$bkrd-primary-color;
+  box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+  border-radius: 5px;
+} 
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  font-family: t.$font-montserrat;
-  background-color: c.$bkrd-tertiary-color;
+  position: sticky;
+  font-size: 20px;
+  font-family: t.$font-questrial;
+  background-color: c.$bkrd-primary-color;
   color: c.$secondary-color;
   width: 100%;
   height: 70px;
   top: 0px;
   padding: 0 30px;
-  z-index: 2;
+  
 
   a {
+    font-family: t.$font-questrial;
+    font-size: 20px;
     color: c.$secondary-color;
-    padding: 10px 20px;
+    padding: 5px 10px;
     margin: 0 5px;
+
+    &:hover {
+      color: c.$secondary-color-drk;
+    }
   } 
   
 
@@ -33,10 +48,8 @@
     }
   } 
 
- 
-
-
 }
+
 
 
 // .navBarContainer {

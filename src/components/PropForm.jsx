@@ -52,54 +52,58 @@ const PropForm = ({ addProp, setCurrentProp }) => {
   };
 
   return (
-    <form className="propForm">
-      <label className="label" >
-        Property Name:
-        <input
-          type="text"
-          value={propInfo.propName}
-          onChange={handleChangePropName}
+    <div className="propform">
+      <form>
+        <div className="select">
+          <label className="label">
+            Property Name:
+            <input
+              type="text"
+              value={propInfo.propName}
+              onChange={handleChangePropName}
+            />
+          </label>
+        </div>
+
+        <TypeButton
+          propInfo={propInfo}
+          value={propInfo.type}
+          setPropInfo={setPropInfo}
         />
-      </label>
-
-      <TypeButton
-        propInfo={propInfo}
-        value={propInfo.type}
-        setPropInfo={setPropInfo}
-      />
 
 
-      <label>
-        Required:
-        <SetRequiredButton propInfo={propInfo} setPropInfo={setPropInfo} />
-      </label>
+        <label>
+          Required:
+          <SetRequiredButton propInfo={propInfo} setPropInfo={setPropInfo} />
+        </label>
+        <div className="select">
+        <label>
+          Unique:
+          <SetUniqueButton propInfo={propInfo} setPropInfo={setPropInfo} />
+        </label>
+        </div>
+        <label>
+          Default Value:
+          <input
+            type="text"
+            value={propInfo.defaultVal}
+            onChange={handleChangeDefaultVal}
+          />
+        </label>
+        
+        <label>
+          Validation Function:
+          <input
+            type="checkbox"
+            checked={propInfo.validationFunc}
+            onChange={handleChangeFunc}
+          />
+        </label>
 
-      <label>
-        Unique:
-        <SetUniqueButton propInfo={propInfo} setPropInfo={setPropInfo} />
-      </label>
-
-      <label>
-        Default Value:
-        <input
-          type="text"
-          value={propInfo.defaultVal}
-          onChange={handleChangeDefaultVal}
-        />
-      </label>
-      
-      <label>
-        Validation Function:
-        <input
-          type="checkbox"
-          checked={propInfo.validationFunc}
-          onChange={handleChangeFunc}
-        />
-      </label>
-
-      <button onClick={handleClick}>Save Property</button>
-      
-    </form>
+        <button className="btn_form" onClick={handleClick}>Save Property</button>
+        
+      </form>
+    </div>
   );
 };
 

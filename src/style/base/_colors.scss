@@ -1,28 +1,35 @@
 
-$bkrd-primary-color: #f6f6f6;
-$bkrd-secondary-color: darken($bkrd-primary-color, 5%);
-$bkrd-tertiary-color:#ededed;
+$bkrd-primary-color: #FDFDFA;
 
 $primary-black: #181818;
-$secondary-black: lighten($primary-black, 20%);
-$tertiary-black: lighten($secondary-black, 20%);
+$primary-grey: #645E59;
 
-$primary-color: #73aec9;
-$primary-color-lt: lighten($primary-color, 20%);
-$primary-color-drk: darken($primary-color, 20%);
 
-$secondary-color: #81a18a;
-$secondary-color-lt: lighten($secondary-color, 20%);
-$secondary-color-drk: darken($secondary-color, 20%);
+$primary-color-xdrk: #67BF9F;
+$primary-color-drk: #82D3B4;
+$primary-color: #adcec2;
+$primary-color-lt: #c1d9ce;
+$primary-color-xlt: #d8e6df;
 
-$tertiary-color: #d6c2c1;
-$tertiary-color-lt: lighten($tertiary-color, 20%);
-$tertiary-color-drk: darken($tertiary-color, 20%);
+$secondary-color-xdrk:#638FDC;
+$secondary-color-drk: #79ACFF;
+$secondary-color: #b0c5e7;
+$secondary-color-lt: #b6cbe0;
+$secondary-color-xlt: #cad7e4;
 
-$primary-accent-color: #f87dba;
+$tertiary-color-xdrk:#DE70A5;
+$tertiary-color-drk: #FF99C9;
+$tertiary-color: #ECC2D6;
+$tertiary-color-lt: #F6E1EB;
+$tertiary-color-xlt: #FAF0F5;
 
-$btn-primary: #3D405B;
-$btn-secondary: #6E7296;
+$linen-color-lt:#FDFDFA;
+$linen-color: #fff7f1;
+$linen-color-drk: #EEE3D9;
+
+
+// $btn-primary: ;
+// $btn-secondary: ;
 
 
 
