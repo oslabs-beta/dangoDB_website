@@ -50,7 +50,8 @@ module.exports = {
     new HtmlWebpackPlugin(
       {
         template: './src/index.html',
-      }
+        favicon: './src/assets/dango_deno_256.png'
+      }, 
     ),
   ],
   resolve: {

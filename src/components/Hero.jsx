@@ -1,14 +1,14 @@
 import React from 'react';
+import dangoLogo from '../assets/dangoDB_logo_long_midboi.png'
 
 
 
 
 function Hero() {
     return (
-       <div>
-        <h1>This is the hero banner</h1>
-        {/* <img src={require('../assets/dangoDBlg.png')} alt="dangoDB Logo" /> */}
-       </div>
+        <section className="hero-container">
+            <img src={dangoLogo} alt="dangoDB Main Logo" id="dango-main-logo"/>
+        </section>
     );
 }
  
