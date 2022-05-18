@@ -44,7 +44,7 @@ const CopyButton = ({ parsedProps }) => {
             {/* <button>Copy</button> */}
             <FaRegCopy className='copy-button' />
           </CopyToClipboard>
-          {copied ? <span style={{color: 'red'}}>Copied.</span> : null}
+          {/* {copied ? <span style={{color: 'red'}}>Copied.</span> : null} */}
         </div>
       );
 }

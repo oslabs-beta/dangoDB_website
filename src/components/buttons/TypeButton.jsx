@@ -19,7 +19,7 @@ const TypeButton = ({ propInfo, setPropInfo }) => {
   };
 
   return (
-    <div>
+    <div className="dropdown">
       <Dropdown
         label="type"
         id="type"
@@ -35,7 +35,7 @@ const Dropdown = ({ value, handleTypeChange, typeOptions }) => {
   return (
     <label>
       Type:
-      <select value={value} onChange={handleTypeChange}>
+      <select className="toggle" value={value} onChange={handleTypeChange}>
         {typeOptions.map((option) => (
           <option key={option.name} value={option.value}>{option.name}</option>
         ))}
