@@ -12,7 +12,7 @@ const MainContainer = ({ savedProps, setSavedProps }) => {
 
   const schemaToggler = () => {
     setGenerateSchema(!generateSchema);
-  }
+  };
   const addProp = (property) => {
     if (currentProp.index === undefined) {
       setSavedProps([...savedProps, property]);
@@ -21,21 +21,24 @@ const MainContainer = ({ savedProps, setSavedProps }) => {
       const saved = savedProps.slice();
       saved[currentProp.index] = property;
       setSavedProps(saved);
-    };
+    }
   };
 
   // Server request and setting session cookie to save on page reload
   React.useEffect(() => {
-    const response = fetch('/save-schema', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ schema: savedProps })
-    })
-      .catch((err) => {
-        console.log(`${err}`);
-      });
+    console.log('here', savedProps.length);
+    if (savedProps.length !== 0) {
+      const response = fetch('/save-schema', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ schema: savedProps })
+      })
+        .catch((err) => {
+          console.log(`${err}`);
+        });
+    }
   }, [savedProps]);
 
   return (

@@ -5,12 +5,12 @@ import UserSchema from './UserSchema';
 const SchemaGenerator = ({ generateSchema, setGenerateSchema, savedProps }) => {
   return (
     <div className="schemaGen_container">
-       <div className="schemaGenerator">
-          <UserSchema 
+      <div className="schemaGenerator">
+        <UserSchema 
           generateSchema={generateSchema} 
           savedProps={savedProps} 
-          />
-       </div>
+        />
+      </div>
     </div>
   );
 };
