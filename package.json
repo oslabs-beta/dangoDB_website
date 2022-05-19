@@ -1,0 +1,88 @@
+{
+  "name": "dangodb_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server/server.js",
+    "build": "NODE_ENV=production webpack",
+    "dev": "NODE_ENV=development webpack serve --open & nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .  --ext .js",
+    "lint-fix": "eslint --fix .  --ext .js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oslabs-beta/dangoDB_website.git"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "build",
+      "client"
+    ]
+  },
+  "keywords": [],
+  "author": "dangoDB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oslabs-beta/dangoDB_website/issues"
+  },
+  "homepage": "https://github.com/oslabs-beta/dangoDB_website#readme",
+  "dependencies": {
+    "-": "^0.0.1",
+    "@codemirror/lang-javascript": "^0.20.0",
+    "@codemirror/theme-one-dark": "^0.20.0",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.7.0",
+    "@uiw/react-codemirror": "^4.7.0",
+    "babel-loader": "^8.2.5",
+    "codemirror": "^5.65.3",
+    "connect-history-api-fallback": "^1.6.0",
+    "cookie-parser": "^1.4.6",
+    "copy-to-clipboard": "^3.3.1",
+    "css-loader": "^6.7.1",
+    "express": "^4.18.1",
+    "file-saver": "^2.0.5",
+    "firebase": "^9.8.1",
+    "firebase-admin": "^10.2.0",
+    "firebase-functions": "^3.21.2",
+    "html-webpack-plugin": "^5.5.0",
+    "js-beautify": "^1.14.3",
+    "kill-port": "^2.0.0",
+    "nodemon": "^2.0.16",
+    "path": "^0.12.7",
+    "react": "^18.1.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dom": "^18.1.0",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1",
+    "react-syntax-highlighter": "^15.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-react": "^7.16.7",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.15.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "favicons": "^6.2.2",
+    "file-loader": "^6.2.0",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
