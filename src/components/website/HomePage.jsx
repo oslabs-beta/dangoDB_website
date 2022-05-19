@@ -50,7 +50,7 @@ function Home() {
                     </a>
                     
                     <a href="#/schema" className="get-started-content-container">
-                        <h3 className="get-started-content-title">Design Your Schema</h3>
+                      <h3 className="get-started-content-title">Design Your Schema</h3>
                         <p className="get-started-content-description">Build your schema with our easy-to-use schema generator. With just a few clicks, you can copy and paste your new schema straight to your codebase.</p>
                     </a>
                 </section>

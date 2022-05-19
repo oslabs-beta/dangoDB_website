@@ -66,12 +66,17 @@
 
   .nav-title {
     display: flex;
-    gap: 0.25rem;
     align-items: center;
+    a {
+      margin: 0;
+      padding: 2px 0 2px 2px;
+      #dangoDB-logo {
+        width: 3rem;
+        height: 3rem;
+        margin: 0 0 0 5px;
+      } 
+    }
   
-    #dangoDB-logo {
-      width: 3rem;
-      height: 3rem;
-    }  
+ 
   }
 } ;

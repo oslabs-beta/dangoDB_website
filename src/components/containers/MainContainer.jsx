@@ -43,30 +43,32 @@ const MainContainer = ({ savedProps, setSavedProps }) => {
 
   return (
     <main className="mainContainer">
-      <SideBar
+      {/* <SideBar
         savedProps={savedProps}
         setSavedProps={setSavedProps}
         currentProp={currentProp}
-      />
-      <section>
-        {generateSchema === false && <PropForm
-          addProp={addProp}
-          setCurrentProp={setCurrentProp}
-        />}
-        {generateSchema === true && <SchemaGenerator
-          generateSchema={generateSchema}
-          setGenerateSchema={setGenerateSchema}
-          savedProps={savedProps}
-        />}
-      </section>
-      <section>
-        {generateSchema === true && <button onClick={schemaToggler} className="schemabtn">
-          New Property
-        </button>}
-        {generateSchema === false && <button onClick={schemaToggler}  className="schemabtn">
-          Generate Schema
-        </button>}
-      </section>
+      /> */}
+      <div className="center_cont">
+        <section>
+          {generateSchema === false && <PropForm
+            addProp={addProp}
+            setCurrentProp={setCurrentProp}
+          />}
+          {generateSchema === true && <SchemaGenerator
+            generateSchema={generateSchema}
+            setGenerateSchema={setGenerateSchema}
+            savedProps={savedProps}
+          />}
+        </section>
+        <section>
+          {generateSchema === true && <button onClick={schemaToggler} className="schemabtn">
+            New Property
+          </button>}
+          {generateSchema === false && <button onClick={schemaToggler}  className="schemabtn">
+            Generate Schema
+          </button>}
+        </section>
+      </div>
     </main>
   );
 };
