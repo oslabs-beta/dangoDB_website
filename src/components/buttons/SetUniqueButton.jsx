@@ -1,5 +1,6 @@
 import * as React from 'react'; 
 
+// Button component for Unique boolean in Property creator form
 const SetUniqueButton = ({ propInfo, setPropInfo }) => {
     return (
       <div>

@@ -3,11 +3,13 @@ import PropForm from '../PropForm';
 import SideBar from './SideBar';
 import SchemaGenerator from '../SchemaGenerator';
 
+// Main container on Schema Page holding all components
 const MainContainer = ({ savedProps, setSavedProps }) => {
+
+  // Setting state for Generate Schema and New Property buttons
   const [currentProp, setCurrentProp] = React.useState({ index: undefined });
-  //generate schema button state
   const [generateSchema, setGenerateSchema] = React.useState(false);
-  const [generateProp, setGenerateProp] = React.useState(false);
+
   const schemaToggler = () => {
     setGenerateSchema(!generateSchema);
   }
@@ -16,14 +18,13 @@ const MainContainer = ({ savedProps, setSavedProps }) => {
       setSavedProps([...savedProps, property]);
     }
     else {
-      //if user edits property, replace relevant index with updated property
       const saved = savedProps.slice();
       saved[currentProp.index] = property;
       setSavedProps(saved);
-    }
+    };
   };
 
-  //n save send a server request and set a session cookie based on the current saved properties to persist on page reload.
+  // Server request and setting session cookie to save on page reload
   React.useEffect(() => {
     const response = fetch('/save-schema', {
       method: 'POST',
@@ -39,17 +40,14 @@ const MainContainer = ({ savedProps, setSavedProps }) => {
 
   return (
     <main className="mainContainer">
-      {/* <h1>Add Property</h1> */}
       <SideBar
         savedProps={savedProps}
         setSavedProps={setSavedProps}
         currentProp={currentProp}
-        // setCurrentProp={setCurrentProp}
       />
       <section>
         {generateSchema === false && <PropForm
           addProp={addProp}
-          // currentProp={currentProp}
           setCurrentProp={setCurrentProp}
         />}
         {generateSchema === true && <SchemaGenerator
@@ -66,12 +64,10 @@ const MainContainer = ({ savedProps, setSavedProps }) => {
           Generate Schema
         </button>}
       </section>
-   
-
-      {/* <button onClick={() => console.log(savedProps)}>hi</button> */}
     </main>
   );
 };
+
 export default MainContainer;
 
 

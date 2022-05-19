@@ -1,7 +1,7 @@
 @use './colors' as c;
 @use './typography' as t;
 
-
+// all base and reset styling for webpage
 
 html,
 body,
@@ -91,6 +91,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,

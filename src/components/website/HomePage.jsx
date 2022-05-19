@@ -6,17 +6,13 @@ import { AiFillDatabase } from 'react-icons/ai';
 import { FaDatabase } from 'react-icons/fa';
 
 
-
+// Home page containing hero, main content and footer
 function Home() {
     return (
        <section className="home-container">
             <section className="home-hero-container main-content">
                 <Hero/>
                 <section className="main-description">
-                    {/* <h1>What is 
-                        <div className="dango-text"> dangoDB</div>
-                        ?
-                    </h1> */}
                     <p>
                         <strong className="dango-text">dangoDB </strong> 
                         is a light-weight
@@ -62,6 +58,6 @@ function Home() {
             <HomeFooter />
        </section>
     );
-}
+};
 
 export default Home;
