@@ -57,60 +57,60 @@ const PropForm = ({ addProp, setCurrentProp }) => {
   return (
     
     <div className="Form">
-       <h1>Property Generator</h1>
+      <h1>Property Generator</h1>
       <div className="outerbrdr">
         <form>
-        <div className="form-row">
+          <div className="form-row">
 
-          <label for="prop-type"> Property Name:</label>
-              <input
-                id="prop-type"
-                type="text"
-                value={propInfo.propName}
-                onChange={handleChangePropName}
-              />
-        </div>  
-        <div className="form-row">
-          <TypeButton
-            propInfo={propInfo}
-            value={propInfo.type}
-            setPropInfo={setPropInfo}
-          />
-        </div>
-        <div className="form-row">
-          <label>
+            <label htmlFor="prop-type"> Property Name:</label>
+            <input
+              id="prop-type"
+              type="text"
+              value={propInfo.propName}
+              onChange={handleChangePropName}
+            />
+          </div>  
+          <div className="form-row">
+            <TypeButton
+              propInfo={propInfo}
+              value={propInfo.type}
+              setPropInfo={setPropInfo}
+            />
+          </div>
+          <div className="form-row">
+            <label>
             Required:</label>
             <SetRequiredButton propInfo={propInfo} setPropInfo={setPropInfo} />
-        </div>
+          </div>
           <div className="form-row">
             <label className="unique"> Unique: </label>
-              <SetUniqueButton propInfo={propInfo} setPropInfo={setPropInfo} />
+            <SetUniqueButton propInfo={propInfo} setPropInfo={setPropInfo} />
           </div>
           <div className="form-row">
-            <label for="defaultval"> Default Value: </label>
-              <input
-                id="defaultval"
-                type="text"
-                value={propInfo.defaultVal}
-                onChange={handleChangeDefaultVal}
-              />
+            <label htmlFor="defaultval"> Default Value: </label>
+            <input
+              id="defaultval"
+              type="text"
+              value={propInfo.defaultVal}
+              onChange={handleChangeDefaultVal}
+            />
           </div>
           <div className="form-row">
-            <label for="checkb">
+            <label htmlFor="checkb">
               Validation Function:
             </label>
-              <input
-                id="checkb"
-                type="checkbox"
-                checked={propInfo.validationFunc}
-                onChange={handleChangeFunc}
-              />
+            <input
+              id="checkb"
+              type="checkbox"
+              checked={propInfo.validationFunc}
+              onChange={handleChangeFunc}
+            />
           </div>
-          </form>
+        </form>
       </div>
-          <div className="form-row">
-            <button className="btn_form" onClick={handleClick}>Save Property</button>
-          </div>
+      <div className="form-row">
+        <button className="btn_form" onClick={handleClick}>Save Property</button>
+      </div>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import Home from './components/website/HomePage';
 // import Demo from './components/website/DemoPage';
 // import Docs from './components/website/DocsPage';
 import Schema from './components/website/SchemaPage';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
 
 // App page housing all components
 const App = () => {
@@ -16,11 +16,11 @@ const App = () => {
     fetch('/save-schema')
       .then((res) => res.json())
       .then((data) => {
-      setSavedProps(data)
-    })
-    .catch((err) => {
-      console.log(`${err}`);
-    });
+        setSavedProps(data);
+      })
+      .catch((err) => {
+        console.log(`${err}`);
+      });
   }, []);
 
   return (
