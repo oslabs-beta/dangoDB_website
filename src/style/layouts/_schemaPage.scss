@@ -1,8 +1,8 @@
 @use '../base/colors' as c;
 @use '../base/typography' as t;
-@use '../base/buttons' as b;
 
 
+// Schema Page styling
 .mainContainer {
   background-color: c.$bkrd-primary-color;
   display: flex;
@@ -13,8 +13,7 @@
   overflow: hidden;
   margin: 0;
 
-   // Side Bar
-
+  // Side bar housing saved properties
    .side_bar {
     display: flex;
     align-items: center;
@@ -25,7 +24,6 @@
   }
 
   .schemaGen_container {
-  
       .codeblock {
         position: relative;
 
@@ -34,8 +32,6 @@
         border: 4px solid c.$primary-grey;
         }
       }
-    
-
   }
 
   .cpybtn {
@@ -77,7 +73,6 @@
       padding: 30px;
       border: 3px solid c.$primary-color-lt;
       border: 2px solid c.$primary-color;
-      
     }
 
     h1 {
@@ -99,9 +94,6 @@
       margin: 3px 5px;
       padding: 5px;
 
-   
-  
-
       input[type="radio"] {
         appearance: none;
         width: 15px;
@@ -116,7 +108,6 @@
         background-color: c.$primary-grey;
       }
     
-
       #prop-type {
         display: flex;
         font-size: 16px;
@@ -140,11 +131,11 @@
           border: 1px solid c.$primary-color-lt;
         }
       }
+
       .required {
         display: flex;
         justify-content: space-between;
       }
-
 
       .unique {
         display: flex;
@@ -155,7 +146,6 @@
         }
       }
 
-
       #defaultval {
         font-family: t.$font-questrial;
         font-size: 16px;
@@ -163,9 +153,7 @@
         border-radius: 5px;
         border: 1px solid c.$primary-color-xlt;
         width: 175px;
-   
       }
-
 
         .btn_form {
           display: flex;
@@ -194,13 +182,9 @@
           }
       
       }
-    
-
     }
   }
-
  
-  
   //  Schema Generator
   .schemabtn {
     display: flex;
@@ -223,14 +207,10 @@
     &:hover {
       background-color: c.$primary-color;
       color: c.$primary-color-xlt;
-
     }
 
     &:active {
       background: c.$primary-grey
     }
-   
- 
-
   }
 }

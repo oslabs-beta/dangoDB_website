@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+// Button component for Required boolean in Property creator form
 const SetRequiredButton = ({ propInfo, setPropInfo }) => {
 
   return (
@@ -28,4 +29,5 @@ const SetRequiredButton = ({ propInfo, setPropInfo }) => {
     </div>
   );
 };
+
 export default SetRequiredButton;

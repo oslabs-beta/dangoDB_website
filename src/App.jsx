@@ -7,13 +7,12 @@ import Home from './components/website/HomePage';
 import Schema from './components/website/SchemaPage';
 import Footer from './components/Footer'
 
-
+// App page housing all components
 const App = () => {
   
   const [savedProps, setSavedProps] = React.useState([]);
 
   React.useEffect(() => {
-     
     fetch('/save-schema')
       .then((res) => res.json())
       .then((data) => {
@@ -24,14 +23,11 @@ const App = () => {
     });
   }, []);
 
-
   return (
     <div className="App">
       <HashRouter>
         <NavBar />
         <Routes>
-          {/* <Route exact element={<Home />} path="/" /> */}
-       
           <Route
             exact
             element={
@@ -39,17 +35,13 @@ const App = () => {
             }
             path="/"
           />
-          {/* <Route element={<Demo />} path="/demo" />
-          <Route element={<Docs />} path="/docs" /> */}
           <Route element={<Schema savedProps={savedProps} setSavedProps={setSavedProps} />} path="/schema" />
-          
         </Routes>
         <Footer/>
       </HashRouter>
-
-      {/* <MainContainer /> */}
     </div>
   );
 };
+
 
 export default App;

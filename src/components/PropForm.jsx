@@ -3,8 +3,10 @@ import TypeButton from './buttons/TypeButton';
 import SetRequiredButton from './buttons/SetRequiredButton';
 import SetUniqueButton from './buttons/SetUniqueButton';
 
-
+// Property form for storing property object for later use - passed onto Property Button
 const PropForm = ({ addProp, setCurrentProp }) => {
+
+  // Schema field needed in dangoDB;
   const [propInfo, setPropInfo] = React.useState({
     propName: '',
     type: 'number',
@@ -35,6 +37,7 @@ const PropForm = ({ addProp, setCurrentProp }) => {
     });
   };
 
+  // saving schema session data via cookies and reseting Property Form fields
   const handleClick = (event) => {
     event.preventDefault();
     addProp(propInfo);
@@ -68,7 +71,6 @@ const PropForm = ({ addProp, setCurrentProp }) => {
               />
         </div>  
         <div className="form-row">
-
           <TypeButton
             propInfo={propInfo}
             value={propInfo.type}
@@ -76,11 +78,9 @@ const PropForm = ({ addProp, setCurrentProp }) => {
           />
         </div>
         <div className="form-row">
-        
           <label>
             Required:</label>
             <SetRequiredButton propInfo={propInfo} setPropInfo={setPropInfo} />
-          
         </div>
           <div className="form-row">
             <label className="unique"> Unique: </label>
@@ -109,14 +109,11 @@ const PropForm = ({ addProp, setCurrentProp }) => {
           </form>
       </div>
           <div className="form-row">
-            {/* <div className="flexbtn"> */}
             <button className="btn_form" onClick={handleClick}>Save Property</button>
-            {/* </div> */}
           </div>
-        
-     
     </div>
   );
 };
+
 
 export default PropForm;
