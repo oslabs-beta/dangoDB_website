@@ -1,14 +1,8 @@
 import * as React from 'react';
 import UserSchema from './UserSchema';
 
+// Schema creation from saved property form
 const SchemaGenerator = ({ generateSchema, setGenerateSchema, savedProps }) => {
-
-  // const genSchemaOnClick = (event) => {
-  //   // event.preventDefault();
-  //   setGenerateSchema(true);
-  // };
-
-  //edit schema?  setGenerateSchema(false);
   return (
     <div className="schemaGen_container">
        <div className="schemaGenerator">
@@ -17,19 +11,9 @@ const SchemaGenerator = ({ generateSchema, setGenerateSchema, savedProps }) => {
           savedProps={savedProps} 
           />
        </div>
-      <div>
-      {/* <button className="schemabtn"
-          onClick={genSchemaOnClick}>
-          Generate Schema
-        </button> */}
-        {/* <button className="new_prop"
-          onClick={}>
-          Generate Property
-        </button> */}
-      </div>
-    
     </div>
   );
 };
+
 
 export default SchemaGenerator;

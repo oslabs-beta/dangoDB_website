@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+// Drop down type button for Property Generator
 const TypeButton = ({ propInfo, setPropInfo }) => {
   const typeOptions = [
     { name: 'number', value: 'number' },
@@ -31,6 +32,7 @@ const TypeButton = ({ propInfo, setPropInfo }) => {
   );
 };
 
+// Dropdown event change for Type button
 const Dropdown = ({ value, handleTypeChange, typeOptions }) => {
   return (
     <label>

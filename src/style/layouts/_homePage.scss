@@ -1,38 +1,12 @@
 @use '../base/colors' as c;
 @use '../base/typography' as t;
-@use '../base/buttons' as b;
 
-.item-a {
-  grid-area: header;
-}
-.item-b {
-  grid-area: main;
-}
-.item-c {
-  grid-area: sidebar;
-}
-.item-d {
-  grid-area: footer;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 50px 50px 50px 50px;
-  grid-template-rows: auto;
-  grid-template-areas: 
-    "header header header header"
-    "sidebar main main main"
-    "footer footer footer footer";
-.mainContainer {
-    box-sizing: content-box;
-    max-width: 80%
-}
-}
-
+// Home page main content styling
 .main-content {
   padding: 10%;
 }
 
+// Hero banner styling
 .hero-container {
   text-align: center;
 }
@@ -40,48 +14,33 @@
 .home-hero-container {
   display: flex;
   padding: 5% 10%;
-}
 
-@media screen and (max-width: 750px) {
-  .home-hero-container {
-    flex-direction: column;
-  }
-  }
+  .main-description {
+    font-family: t.$font-questrial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    flex: 1 0 50%;
+    
+    h1 {
+      margin-top: 10px 0;
+      font-size: 3.5rem;
+      line-height: 1.5;
+      font-weight: bold;
+    }
 
+    p {
+      line-height: 1.5;
+      font-size: 1.5rem;
+    }
 
-#dango-main-logo {
-  padding-top: 1rem 0;
-  // width: 80%;
-  // max-width: 60rem;
-  flex: 1 0 50%;
-}
+    a {
+      color: c.$secondary-color;
 
-.main-description {
-  font-family: t.$font-questrial;
-  display: flex;
-  // flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  flex: 1 0 50%;
-  
-  h1 {
-    margin-top: 10px 0;
-    font-size: 3.5rem;
-    line-height: 1.5;
-    font-weight: bold;
-  }
-
-  p {
-    line-height: 1.5;
-    font-size: 1.5rem;
-  }
-
-  a {
-    color: c.$secondary-color;
-
-    &:hover {
-      color: c.$secondary-color-drk;
+      &:hover {
+        color: c.$secondary-color-drk;
+      }
     }
   }
 }
@@ -90,27 +49,63 @@
   .home-hero-container {
     flex-direction: column;
   }
-  .main-description {
-    text-align: center;
+  }
+
+  #dango-main-logo {
+    padding-top: 1rem 0;
+    flex: 1 0 50%;
+}
+
+
+@media screen and (max-width: 750px) {
+  .home-hero-container {
+    flex-direction: column;
+
+    .main-description {
+      text-align: center;
+      
+      .dango-text {
+        display: inline;
+        color: c.$primary-color-drk;
+      }
+    }
   }
 }
 
+// Main features styling
 .main-features {
   background-color: c.$primary-color-xlt;
   display: flex;
   justify-content: space-evenly;
   text-align: center;
   gap: 2rem;
-}
 
-.feature {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;
-  flex: 1 0 33%;
-  flex-wrap: wrap;
+  .feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    flex: 1 0 33%;
+    flex-wrap: wrap;
+  }
+
+  .feature-icon {
+    color: c.$primary-grey;
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .feature-title {
+    font-family: t.$font-questrial;
+    font-size: 2.75rem;
+    color: c.$primary-grey;
+  }
+  
+  .feature-description {
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -119,87 +114,65 @@
   }
 }
 
-.feature-icon {
-  color: c.$primary-grey;
-  height: 3rem;
-  width: 3rem;
-}
-
-.feature-title {
-  font-family: t.$font-questrial;
-  font-size: 2.75rem;
-  color: c.$primary-grey;
-}
-
-.feature-description {
-  font-size: 1.25rem;
-  line-height: 1.2;
-}
-
+// Get started banner styling housing schema and dangoDB
 .main-get-started {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-}
 
-.get-started-title {
-  font-family: t.$font-questrial;
-  font-size: 2.75rem;
-  color: c.$primary-black;
-}
-
-.get-started-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  :hover {
-    transform: scale(1.05);
+  .get-started-title {
+    font-family: t.$font-questrial;
+    font-size: 2.75rem;
+    color: c.$primary-black;
   }
-}
 
-.get-started-content-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  flex: 1 1 0px;
-  background-color: c.$primary-color-xlt;
-  border-radius: 8px;
-  padding: 1.5rem;
-  gap: .5rem;
-  :hover {
-    transform: scale(1);
+  .get-started-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    :hover {
+      transform: scale(1.05);
+    }
   }
- 
+
+  .get-started-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 0px;
+    background-color: c.$primary-color-xlt;
+    border-radius: 8px;
+    padding: 1.5rem;
+    gap: .5rem;
+    
+    &:hover {
+      transform: scale(1);
+    }
+
+    .get-started-content-title {
+      font-family: t.$font-questrial;
+      font-size: 2rem;
+      color: c.$primary-grey;
+    }
+    
+    .get-started-content-description {
+      line-height: 1.2;
+      font-size: 1.1rem;
+      color: c.$primary-grey;
+    }
+  }
 }
 
 @media screen and (max-width: 750px){
   .get-started-content {
     flex-direction: column;
-
   }
-
 }
 
-.get-started-content-title {
-  font-family: t.$font-questrial;
-  font-size: 2rem;
-  color: c.$primary-grey;
-}
-
-.get-started-content-description {
-  line-height: 1.2;
-  font-size: 1.1rem;
-  color: c.$primary-grey;
-}
-
-.dango-text {
-  display: inline;
-  color: c.$primary-color-drk;
-}
-
+// Home Footer contact component styling
 .home-footer-container {
   background: c.$primary-color-xlt;
   text-align: center;
@@ -210,88 +183,89 @@
     font-size: 2.75rem;
     color: c.$primary-grey;
   }
-}
 
-.home-footer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  padding: 2rem;
-}
-
-.contact-card {
-  padding: 1.25rem 1.5rem 1rem 1.5rem;
-  background: c.$bkrd-primary-color;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  flex: 0 0 auto;
-  align-items: center;
-  gap: 0.5rem;
-  text-align: center;
-  &:hover, &:focus {
-    animation: shake .8s cubic-bezier(.36,.07,.19,.97) both;
-    backface-visibility: hidden;
-    transform-origin: center;
-  }
-  div {
+  .home-footer {
     display: flex;
-    gap: 0.25rem;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem;
   }
-}
-@keyframes shake {
-  0% { transform: rotate(0); }
-  20% { transform: rotate(3deg); }
-  40% { transform: rotate(-3deg); }
-  60% { transform: rotate(2deg); }
-  80% { transform: rotate(-2deg); }
-  100% { transform: rotate(0); }
-}
 
-.headshot {
-  height: 7rem;
-  width: 7rem;
-  border-radius: 8px;
-}
-
-.contact-name {
-  font-size: 1.1rem;
-  font-weight: 800;
-  font-family: t.$font-questrial;
-}
-
-.contact-title {
-  font-size: 0.95rem;
-  font-family: t.$font-questrial;
-  word-wrap: false;
-}
-
-.contact-link-container {
-  height: 2.5rem;
-  width: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.contact-link {
-  color: c.$tertiary-color;
-  height: 2rem;
-  width: 2rem;
+  .contact-card {
+    padding: 1.25rem 1.5rem 1rem 1.5rem;
+    background: c.$bkrd-primary-color;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    &:hover, &:focus {
+      animation: shake .8s cubic-bezier(.36,.07,.19,.97) both;
+      backface-visibility: hidden;
+      transform-origin: center;
+    }
+    div {
+      display: flex;
+      gap: 0.25rem;
+      justify-content: center;
+    }
+  }
   
-  &:hover {
-    color: c.$tertiary-color-xdrk;
+  @keyframes shake {
+    0% { transform: rotate(0); }
+    20% { transform: rotate(3deg); }
+    40% { transform: rotate(-3deg); }
+    60% { transform: rotate(2deg); }
+    80% { transform: rotate(-2deg); }
+    100% { transform: rotate(0); }
+  }
+
+  .headshot {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 8px;
+  }
+
+  .contact-name {
+    font-size: 1.1rem;
+    font-weight: 800;
+    font-family: t.$font-questrial;
+  }
+
+  .contact-title {
+    font-size: 0.95rem;
+    font-family: t.$font-questrial;
+    word-wrap: false;
+  }
+
+  .contact-link-container {
     height: 2.5rem;
     width: 2.5rem;
-    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
   }
 
-  &:active {
-    height: 1.75rem;
-    width: 1.75rem;
-    transition: 0.3s;
+  .contact-link {
+    color: c.$tertiary-color;
+    height: 2rem;
+    width: 2rem;
+    
+    &:hover {
+      color: c.$tertiary-color-xdrk;
+      height: 2.5rem;
+      width: 2.5rem;
+      transition: 0.3s;
+    }
+
+    &:active {
+      height: 1.75rem;
+      width: 1.75rem;
+      transition: 0.3s;
+    }
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
 
+// Contact component holding software engineer information
 function ContactCard({ photo, linkedin, github, name }) {
   return (
     <li className="contact-card">
@@ -17,6 +18,6 @@ function ContactCard({ photo, linkedin, github, name }) {
       </div>
     </li>
   );
-}
+};
 
 export default ContactCard;

@@ -4,28 +4,12 @@ import { javascript } from '@codemirror/lang-javascript';
 import { oneDark } from '@codemirror/theme-one-dark';
 import CopyButton from './CopyButton';
 
+// User Schema is a rendered schema after clicking generate schema with copy funcationality
 const UserSchema = ({ generateSchema, savedProps }) => {
-  // const codeSnippet = generateSchema === true ? `${JSON.stringify(savedProps)}` : '';
-  
-  // console.log('here', savedProps[2])
-    //iterate through savedProps and add each el to codeSnippet
-  // const generateCodeSnippet = (userProps) => {
-  //   const schemaSnippet = {};
-  //   //for each property in savedProps, we will add a prop to the new object
-  //   for(const prop of userProps) {
-  //     // console.log('look here', prop)
-  //       schemaSnippet[prop.propName] = {type: `${prop.type}`, required: prop.required, unique: prop.unique, default: prop.defaultVal, validator: prop.validationFunc}//this is equal to just the string type OR an object 
-  //                                         //which contains the rest of the parameters
-        
-  //   }
-  //   return JSON.stringify(schemaSnippet)
-  // }
-
-
 
   const [parsedProps, setParsedProps] = React.useState('');
   
-  //Temporary useEffect
+  // Temporary useEffect
   React.useEffect(() => {
     setParsedProps(parseState(savedProps));
   }, [savedProps]);
@@ -34,12 +18,12 @@ const UserSchema = ({ generateSchema, savedProps }) => {
 
     <div className="codeblock">
       <div className="cpybtn">
-      <CopyButton
-        className="copy_btn"
-        parsedProps = { parsedProps }
-      />
-       </div>
-       <div className="mirror">
+        <CopyButton
+          className="copy_btn"
+          parsedProps = { parsedProps }
+        />
+      </div>
+      <div className="mirror">
         <CodeMirror
           className="codemirror"
           value={parsedProps}
@@ -50,12 +34,9 @@ const UserSchema = ({ generateSchema, savedProps }) => {
           editable = {false}
         />
       </div>
-      
     </div>
   );
 };  
-
-export default UserSchema;
 
 
 const parseState = (state) => {
@@ -67,7 +48,7 @@ const parseState = (state) => {
   let code = 'const mySchema = dango.schema('.concat(newLine, indent.repeat(numIndent), '{');
   numIndent += 1;
   for (let i = 0; i < state.length; i++) {
-    code = code.concat(newLine)
+    code = code.concat(newLine);
     parseObject(state[i]);
   }
   numIndent -= 1;
@@ -80,32 +61,33 @@ const parseState = (state) => {
       if (key !== 'propName') {
         const parsedKey = parseKey(key)
         const parsedValue = parseValue(key, obj[key])
-        code = code.concat(indent.repeat(numIndent), parsedKey, objectEnd)
-        code = code.concat(parsedValue,',')
-        code = code.concat(newLine)
+        code = code.concat(indent.repeat(numIndent), parsedKey, objectEnd);
+        code = code.concat(parsedValue,',');
+        code = code.concat(newLine);
       }
     }
     code = code.concat(indent.repeat(--numIndent), '},');
     numIndent -= 1;
-  }
+  };
 
   function parseKey (key) {
     if (key === 'defaultVal') key = 'default';
-    else if (key === 'validationFunc') key = 'validator'
+    else if (key === 'validationFunc') key = 'validator';
     return key;
-  }
+  };
 
   function parseValue (key, value) {
     if (key === 'defaultVal' && value === '') return null;
     else if (key === 'validationFunc' && value === false) return null;
-    else if (key === 'validationFunc' && value === true) return '/** Insert Callback Function Here */'
-    else if (key === 'type' || key === 'defaultVal') return `'${value}'`
+    else if (key === 'validationFunc' && value === true) return '/** Insert Callback Function Here */';
+    else if (key === 'type' || key === 'defaultVal') return `'${value}'`;
     else return value;
-  }
-
-  console.log(code);
+  };
   return code;
-}
+};
+
+
+export default UserSchema;
 
 
 

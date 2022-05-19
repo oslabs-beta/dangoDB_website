@@ -2,7 +2,8 @@ import React from 'react';
 import { AiOutlineGithub } from 'react-icons/ai';
 import { SiDeno } from 'react-icons/si';
 
-function Footer(props) {
+// Footer across all pages
+function Footer() {
   
   return (
     <footer className="footer">
@@ -14,6 +15,6 @@ function Footer(props) {
       </a>
     </footer>
   );
-}
+};
 
 export default Footer;

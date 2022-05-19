@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import dangoDeno from '../../../assets/dango_deno.png'
 
-// import { VscGithub } from 'react-icons/fa';
 
+// Navbar container with linked routes
 const NavBar = () => {
   return (
     <nav className="navBarContainer">
@@ -21,16 +21,6 @@ const NavBar = () => {
               Home
             </Link>
           </li>
-          {/* <li>
-            <Link to="/docs" className="docs">
-              Docs
-            </Link>
-          </li>
-          <li>
-            <Link to="/demo" className="demo">
-              Demo
-            </Link>
-          </li> */}
           <li>
             <button className="schema_btn">
             <Link to="/schema" className="gen_schema">
