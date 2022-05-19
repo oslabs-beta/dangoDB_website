@@ -46,10 +46,11 @@ main {
           }
       }
 
+
       .cpybtn {
         position: absolute;
         top: 8px;
-        right: 8px;
+        right: 30px;
         display: inline-block;
         color: c.$bkrd-primary-color;
         z-index: 2;
@@ -63,6 +64,7 @@ main {
           transform: scale(0.85);
           color: c.$primary-grey;
         }
+  
       }
 
       // Property Form
