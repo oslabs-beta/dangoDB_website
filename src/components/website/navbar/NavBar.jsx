@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import dangoDeno from '../../../assets/dango_deno.png'
+import dangoDeno from '../../../assets/dango_deno.png';
 
 
 // Navbar container with linked routes
@@ -12,7 +12,9 @@ const NavBar = () => {
           <a href="#/">
             <img id="dangoDB-logo" src={dangoDeno} alt="dangoDB icon" />
           </a>
-          <h3 className="logo">dangoDB</h3>
+          <a href="#/">
+            <h3 className="logo">dangoDB</h3>
+          </a>
         </div>
         
         <ul className="nav-links">
@@ -23,9 +25,9 @@ const NavBar = () => {
           </li>
           <li>
             <button className="schema_btn">
-            <Link to="/schema" className="gen_schema">
+              <Link to="/schema" className="gen_schema">
               Generate Schema
-            </Link>
+              </Link>
             </button>
           </li>
         </ul>
