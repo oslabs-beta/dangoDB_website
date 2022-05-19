@@ -5,7 +5,7 @@ import Home from './components/website/HomePage';
 // import Demo from './components/website/DemoPage';
 // import Docs from './components/website/DocsPage';
 import Schema from './components/website/SchemaPage';
-import Footer from './components/Footer';
+
 
 // App page housing all components
 const App = () => {
@@ -37,7 +37,6 @@ const App = () => {
           />
           <Route element={<Schema savedProps={savedProps} setSavedProps={setSavedProps} />} path="/schema" />
         </Routes>
-        <Footer/>
       </HashRouter>
     </div>
   );

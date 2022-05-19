@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { AiOutlineGithub } from 'react-icons/ai';
+import { SiDeno } from 'react-icons/si';
 import dangoDeno from '../../../assets/dango_deno.png';
 
 
@@ -29,6 +31,16 @@ const NavBar = () => {
               Generate Schema
               </Link>
             </button>
+          </li>
+          <li className="social_cont">
+            <a href="https://github.com/oslabs-beta/dangoDB">
+              <AiOutlineGithub className="nav_github"/>
+            </a>
+          </li>
+          <li className="social_cont">
+            <a href="https://deno.land/x/dangodb">
+              <SiDeno className="nav_denoland"/>
+            </a>
           </li>
         </ul>
       </nav>

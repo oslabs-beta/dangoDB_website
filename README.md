@@ -12,4 +12,4 @@ Please visit our Generate Schema page in order to easily choose and render a pro
 Resources: 
   Find the documentation here for <a href="https://github.com/oslabs-beta/dangoDB">dangoDB</a>
   V
-  Checkout our <a href=" ">Medium Article</a>
+  Checkout our <a href="https://medium.com/@stephen-jue/dangodb-a-mongodb-odm-for-deno-9ac46943fe54">Medium Article</a>

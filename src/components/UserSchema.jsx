@@ -4,6 +4,7 @@ import { javascript } from '@codemirror/lang-javascript';
 import { oneDark } from '@codemirror/theme-one-dark';
 import CopyButton from './CopyButton';
 
+
 // User Schema is a rendered schema after clicking generate schema with copy funcationality
 const UserSchema = ({ generateSchema, savedProps }) => {
 
@@ -19,6 +20,7 @@ const UserSchema = ({ generateSchema, savedProps }) => {
     <div className="codeblock">
       <div className="cpybtn">
         <CopyButton
+          
           className="copy_btn"
           parsedProps = { parsedProps }
         />

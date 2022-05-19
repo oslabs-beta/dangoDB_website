@@ -8,21 +8,21 @@ import { FaDatabase } from 'react-icons/fa';
 
 // Home page containing hero, main content and footer
 function Home() {
-    return (
-       <section className="home-container">
-            <section className="home-hero-container main-content">
-                <Hero/>
-                <section className="main-description">
-                    <p>
-                        <strong className="dango-text">dangoDB </strong> 
+  return (
+    <section className="home-container">
+      <section className="home-hero-container main-content">
+        <Hero/>
+        <section className="main-description">
+          <p>
+            <strong className="dango-text">dangoDB </strong> 
                         is a light-weight
-                        <a href="https://www.mongodb.com/"> MongoDB </a>
+            <a href="https://www.mongodb.com/"> MongoDB </a>
                         Object Document Mapper (ODM) built for 
-                        <a href="https://deno.land/"> Deno</a>
+            <a href="https://deno.land/"> Deno</a>
                         . It provides the core functionality and familiar look and feel of established Node-based libraries for the Deno runtime.
-                    </p> 
-                </section>
-            </section>
+          </p> 
+        </section>
+        </section>
             <section className="main-features main-content">
                 <section className="feature">
                     <SiMongodb className='feature-icon' />
