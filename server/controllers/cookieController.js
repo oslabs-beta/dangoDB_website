@@ -4,8 +4,8 @@ const cookieController = {};
 cookieController.setSessionCookie = (req, res, next) => {
   try {
     const { schema } = req.body;
-    if (req.cookies.schema) res.clearCookie('schema');
-    res.cookie('schema', schema);
+    if (req.cookies.__session) res.clearCookie('__session');
+    res.cookie('__session', schema);
     return next();
   } catch (err) {
     const error = {
@@ -19,7 +19,7 @@ cookieController.setSessionCookie = (req, res, next) => {
 
 cookieController.getSessionCookie = (req, res, next) => {
   try {
-    const { schema } = req.cookies;
+    const schema = req.cookies.__session;
     res.locals.schema = schema !== undefined ? schema : [];
     return next();
   } catch (err) {
